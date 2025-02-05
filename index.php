@@ -7,7 +7,11 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
-  <header></header>
+  <header>
+    <a href="<?php echo esc_url(home_url('/')); ?>">
+      <?php bloginfo('name'); ?>
+    </a>
+  </header>
 
   <nav></nav>
 
@@ -23,7 +27,9 @@
     <?php endwhile; endif; ?>
   </main>
 
-  <footer></footer>
+  <footer>
+    <?php bloginfo('name'); ?>
+  </footer>
 
   <?php wp_footer(); ?>
 </body>
