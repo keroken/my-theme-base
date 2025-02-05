@@ -25,3 +25,11 @@ function mytheme_widgets() {
   ));
 }
 add_action('widgets_init', 'mytheme_widgets');
+
+// Styles and scripts
+function mytheme_enqueue() {
+
+  // Styles
+  wp_enqueue_style('mytheme-style', get_stylesheet_uri(), array(), date('U'));
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue');

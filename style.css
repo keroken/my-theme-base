@@ -5,3 +5,18 @@ Author: Kenichi Shinagawa
 Description: Original theme for my site.
 Version: 1.0
 */
+
+/* Base */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
