@@ -13,7 +13,13 @@
     </a>
   </header>
 
-  <nav></nav>
+  <?php if (has_nav_menu('primary')): ?>
+  <nav>
+    <?php wp_nav_menu(array(
+      'theme_location' => 'primary',
+    )); ?>
+  </nav>
+  <?php endif; ?>
 
   <main>
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
