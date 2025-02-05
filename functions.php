@@ -14,3 +14,14 @@ function mytheme_setup() {
   ));
 }
 add_action('after_setup_theme', 'mytheme_setup');
+
+// widget area
+function mytheme_widgets() {
+  register_sidebar(array(
+    'name' => 'Sidebar',
+    'id' => 'sidebar-1',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget' => '</section>',
+  ));
+}
+add_action('widgets_init', 'mytheme_widgets');
