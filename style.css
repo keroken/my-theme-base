@@ -216,6 +216,49 @@ body {
 }
 
 /* ================================================================ 
+  Post Page
+=================================================================== */
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.post-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.post-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.post-thumbnail img {
+  width: 400px;
+  height: auto;
+}
+
+.post-title {
+  text-align: center;
+  color: #fff;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 1060px;
+}
+
+/* ================================================================ 
   40th Anniversary Styles
 =================================================================== */
 .front-bg {
