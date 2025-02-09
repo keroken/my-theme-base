@@ -146,6 +146,76 @@ body {
 }
 
 /* ================================================================ 
+  Page
+=================================================================== */
+
+.page-hero-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background: url("images/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-hero-message h1 {
+  position: relative;
+  font-size: 48px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fcba03;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.page-content {
+  width: 80%;
+}
+
+.page-content h3 {
+  text-align: center;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 100px;
+}
+
+.page-content ol {
+  width: 60%;
+  margin: 0 auto;
+  list-style: decimal;
+  text-align: left;
+}
+
+.programs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.programs-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 420px;
+  padding: 20px;
+}
+
+/* ================================================================ 
   40th Anniversary Styles
 =================================================================== */
 .front-bg {
