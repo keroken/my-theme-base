@@ -6,17 +6,664 @@ Description: Original theme for my site.
 Version: 1.0
 */
 
-/* Base */
+/* ================================================================ 
+  GLOBAL STYLES
+=================================================================== */
+* {
+  word-break: unset;
+  word-wrap: unset;
+  -webkit-font-smoothing: unset;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+ul,
+li {
+  list-style: inside;
+}
+
+ol li {
+  list-style: decimal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+section {
+  padding: unset;
+}
+
+button {
+  color: unset;
+  padding: unset;
+  text-transform: unset;
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+  letter-spacing: normal;
+  transition: none;
+  padding-block: 1px;
+  padding-inline: 6px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
 body {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
   margin: 0;
-  font-family: sans-serif;
+  padding: 0;
+  width: 100vw;
 }
 
-figure {
+/* ================================================================ 
+  Header Styles
+=================================================================== */
+
+#site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  transition: all 0.3s ease-in-out;
+}
+
+#site-header.scrolled {
+  height: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-titles {
   margin: 0;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.header-inner {
+  display: flex;
+  padding: 0;
+}
+
+.primary-logo {
+  display: inline-block;
+  height: 100px;
+  transition: all 0.3s ease-in-out;
+}
+
+#site-header.scrolled .primary-logo {
+  height: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+ul.primary-menu {
+  letter-spacing: 0.02em;
+  gap: 30px;
+}
+
+/* ================================================================ 
+  40th Anniversary Styles
+=================================================================== */
+.front-bg {
+  background: #1c57a1;
+  position: relative;
+}
+
+.overlay {
+  background: rgb(0 0 0 / 0.6);
+  display: none;
+  z-index: 10;
+}
+
+.sp40th-container {
+  position: relative;
+  margin: 0 auto;
+  height: 720px;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  clip-path: circle(5720px at right 20% top -5000px);
+}
+
+.hero-area {
+  background: url("images/hero-image.jpg") center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+
+.hero-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.hero-message {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-message h1 {
+  font-size: 48px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fcba03;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.hero-message h2 {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  margin-top: 60px;
+  width: 240px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #fcba03;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  z-index: 1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #f7da79;
+}
+
+.content-area {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opacity0 {
+  opacity: 0;
+}
+
+.section-stats {
+  height: 500px;
+}
+
+.section-title {
+  width: 75%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-title h4 {
+  text-align: center;
+  color: #fff;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 1060px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.stats-item {
+  text-align: center;
+}
+
+.stats-number {
+  font-size: 64px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #ffd45c;
+}
+
+.stats-label {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #ddd;
+}
+
+.section-stories {
+  height: 1800px;
+  padding-bottom: 200px;
+  margin-bottom: 200px;
+}
+
+.story-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.story-preface {
+  margin-top: 40px;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.message-text {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+  color: #ddd;
+}
+
+.story-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.story-circle-button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-circle {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-circle:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.story-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-label {
+  position: absolute;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.story-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 0.6);
+  border-radius: 50%;
+}
+
+.circle-01 {
+  top: calc(0% - 100px);
+  left: -320px;
+  width: 480px;
+  height: 480px;
+  background-image: url(./images/finger_print_circle_01.svg);
+  background-size: cover;
+}
+
+.circle-02 {
+  top: 40%;
+  left: 20%;
+  width: 240px;
+  height: 240px;
+  background-color: #1c57a1;
+  background-image: url("./images/Hatsumi_01.jpg");
+  background-size: cover;
+}
+
+.circle-03 {
+  top: calc(10% - 100px);
+  left: 90%;
+  width: 240px;
+  height: 240px;
+  background-image: url(./images/finger_print_circle_01.svg);
+  background-size: cover;
+}
+
+.circle-04 {
+  top: calc(115% - 100px);
+  left: 35%;
+  width: 120px;
+  height: 120px;
+  background-image: url(./images/finger_print_circle_01.svg);
+  background-size: cover;
+}
+
+.circle-05 {
+  top: 45%;
+  left: 65%;
+  width: 240px;
+  height: 240px;
+  background-color: #1c57a1;
+  background-image: url("./images/Vinu_01.jpg");
+  background-size: cover;
+}
+
+.circle-06 {
+  top: 0%;
+  left: 50%;
+  width: 360px;
+  height: 360px;
+  background-color: #1c57a1;
+  background-image: url("./images/Yan_01.jpg");
+  background-size: cover;
+}
+
+.circle-07 {
+  top: 88%;
+  left: 50%;
+  width: 240px;
+  height: 240px;
+  background-color: #1c57a1;
+  background-image: url("./images/Mindy_01.jpg");
+  background-size: cover;
+}
+
+.circle-08 {
+  top: 75%;
+  left: 8%;
+  width: 360px;
+  height: 360px;
+  background-color: #1c57a1;
+  background-image: url("./images/Kenji_01.jpg");
+  background-size: cover;
+}
+
+.circle-09 {
+  top: calc(20% - 100px);
+  left: 32%;
+  width: 120px;
+  height: 120px;
+  background-image: url(./images/finger_print_circle_01.svg);
+  background-size: cover;
+}
+
+.circle-10 {
+  top: calc(65% - 100px);
+  left: 43%;
+  width: 180px;
+  height: 180px;
+  background-image: url(./images/ISMC_circle_logo_sq.svg);
+  background-size: cover;
+}
+
+.circle-11 {
+  top: 95%;
+  left: 80%;
+  width: 240px;
+  height: 240px;
+  background-image: url(./images/finger_print_circle_01.svg);
+  background-size: cover;
+}
+
+.section-cta {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.cta-message {
+  width: 80%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.cta-message-text {
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.cta-message-text h4 {
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 720px;
+  text-align: center;
+}
+
+strong {
+  font-weight: 600;
+  color: #ffd45c;
+}
+
+dialog {
+  width: 60%;
+  max-width: 80%;
+  background-color: #e0d7d3;
+  padding: 32px;
+  border: none;
+  border-radius: 8px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#story-title {
+  font-size: 24px;
+}
+
+#story-content {
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.close-button,
+.close-button-bottom {
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #eee;
+}
+
+.close-button:hover,
+.close-button-bottom:hover {
+  background-color: #fff;
+}
+
+#story-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  div.story-circle {
+    width: 240px;
+    height: 240px;
+  }
+  .navbar-brand {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .stats-label {
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sp40th-container {
+    height: 600px;
+  }
+  .hero-area {
+    height: 600px;
+  }
+  .section-title {
+    margin-top: unset;
+    width: 100%;
+  }
+  .section-stats {
+    height: unset;
+    margin-bottom: 200px;
+  }
+  .stats-row {
+    flex-direction: column;
+    width: unset;
+    gap: 30px;
+  }
+  .section-stories {
+    height: unset;
+    padding-bottom: 40px;
+  }
+  .message-text {
+    font-size: 16px;
+  }
+  .story-canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  div.fingerprint {
+    display: none;
+  }
+  div.logo-circle {
+    display: none;
+  }
+  div.story-circle {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
+  .section-cta {
+    margin-bottom: 60px;
+  }
+  dialog {
+    width: unset;
+    max-width: 95%;
+  }
+}
+
+/* ================================================================ 
+  Fade In
+=================================================================== */
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100px);
+  }
 }
