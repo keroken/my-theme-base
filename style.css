@@ -22,7 +22,9 @@ html {
 
 ul,
 li {
-  list-style: inside;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 ol li {
@@ -47,6 +49,15 @@ section {
   padding: unset;
 }
 
+a {
+  text-decoration: none;
+  color: #666;
+  &:hover {
+    color: #fcba03;
+    cursor: pointer;
+  }
+}
+
 button {
   color: unset;
   padding: unset;
@@ -58,13 +69,6 @@ button {
   transition: none;
   padding-block: 1px;
   padding-inline: 6px;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
-  &:focus {
-    text-decoration: none;
-  }
 }
 
 body {
@@ -85,7 +89,9 @@ body {
   top: 0;
   width: 100%;
   height: 100px;
+  background-color: #fff;
   transition: all 0.3s ease-in-out;
+  z-index: 10;
 }
 
 #site-header.scrolled {
@@ -100,6 +106,7 @@ body {
 .header-inner {
   display: flex;
   padding: 0;
+  height: 100%;
 }
 
 .primary-logo {
@@ -113,9 +120,29 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-ul.primary-menu {
-  letter-spacing: 0.02em;
-  gap: 30px;
+.header-navigation-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.primary-menu-wrapper {
+  height: 100%;
+  padding: 60px;
+}
+
+.primary-menu {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.primary-menu li {
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 /* ================================================================ 
