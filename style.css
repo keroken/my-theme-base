@@ -81,7 +81,7 @@ body {
 }
 
 /* ================================================================ 
-  Header Styles
+  Header
 =================================================================== */
 
 #site-header {
@@ -143,6 +143,81 @@ body {
 .primary-menu li {
   font-weight: 600;
   text-transform: uppercase;
+}
+
+/* ================================================================ 
+  Footer
+=================================================================== */
+
+#site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 360px;
+  background-color: rgb(17, 48, 86);
+  padding: 60px 80px;
+  color: rgb(142, 169, 220);
+  & a {
+    color: rgb(142, 169, 220);
+    &:hover {
+      color: #fcba03;
+    }
+  }
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 200px;
+  column-gap: 100px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  & h4 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.footer-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: rgb(142, 169, 220);
+}
+
+.to-the-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fcba03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 10;
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* ================================================================ 
@@ -259,7 +334,7 @@ body {
 }
 
 /* ================================================================ 
-  40th Anniversary Styles
+  Front Page
 =================================================================== */
 .front-bg {
   background: #1c57a1;
@@ -362,7 +437,6 @@ body {
   align-items: center;
   padding-bottom: 200px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .section {
