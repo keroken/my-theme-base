@@ -6,7 +6,7 @@
       <h1>Stories</h1>
     </div>
   </div>
-  <main class="post-container">
+  <main class="post-container" id="content-area">
     <div class="page-content">
       <h3>UNITED IN GOD'S GREAT STORIES</h3>
       <div class="message-text about-content">

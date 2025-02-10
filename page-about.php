@@ -8,7 +8,7 @@ $breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
 ?>
 
 <div class="front-bg">
-  <div class="content-area">
+  <div class="content-area" id="content-area">
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
 
       <section <?php post_class(); ?>>
