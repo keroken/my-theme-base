@@ -203,19 +203,16 @@ body {
 }
 
 .to-the-top {
+  opacity: 0;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: #fcba03;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #222;
-  font-size: 24px;
-  font-weight: 700;
   z-index: 10;
   transition: background-color 0.3s ease-in-out;
 }
@@ -879,5 +876,23 @@ dialog {
   100% {
     opacity: 1;
     transform: translateY(100px);
+  }
+}
+
+.fadeIn2 {
+  animation-name: fadeIn2;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

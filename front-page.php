@@ -13,7 +13,7 @@ $breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
     <div class="inner">
       <div class="hero-area move-target">
         <div class="hero-message-container">
-          <div class="hero-message">
+          <div class="hero-message" id="content-area">
             <h1>International Student Ministries Canada</h1>
             <h2>Empowering international students to impact the world through Jesus Christ.</h2>
           </div>
