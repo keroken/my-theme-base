@@ -25,7 +25,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body>
 		<?php wp_body_open(); ?>
 
 		<header id="site-header" class="header-footer-group">
