@@ -2,6 +2,7 @@
 
 <div class="front-bg">
   <div class="page-hero-container">
+    <div class="hero-overlay"></div>
     <div class="page-hero-message">
       <h1>Stories</h1>
     </div>
@@ -19,7 +20,7 @@
           <?php if(has_post_thumbnail()): ?>
             <figure class="post-thumbnail"><?php the_post_thumbnail(); ?></figure>
           <?php endif; ?>
-          <h3 class="post-title"><?php the_title(); ?></h3>
+          <?php the_title( '<h3 class="post-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h3>' ); ?>
           <span class="message-text">
             <?php the_excerpt(); ?>
           </span>
