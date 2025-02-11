@@ -50,11 +50,9 @@ section {
 }
 
 a {
-  text-decoration: none;
-  color: #666;
+  color: unset;
   &:hover {
     color: #fcba03;
-    cursor: pointer;
   }
 }
 
@@ -143,6 +141,15 @@ body {
 .primary-menu li {
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.primary-menu a {
+  text-decoration: none;
+  color: #666;
+  &:hover {
+    color: #fcba03;
+    cursor: pointer;
+  }
 }
 
 /* ================================================================ 
@@ -328,6 +335,41 @@ body {
   font-weight: 500;
   line-height: 1.2;
   max-width: 1060px;
+}
+
+/* ================================================================ 
+  Single Page
+=================================================================== */
+
+.single-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.single-article {
+  width: 80%;
+  margin: 100px 0;
+}
+
+.single-thumbnail {
+  width: fit-content;
+  float: left;
+  margin-right: 20px;
+  & img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+.single-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: left;
+  color: #ddd;
 }
 
 /* ================================================================ 
