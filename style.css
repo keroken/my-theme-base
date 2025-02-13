@@ -272,6 +272,16 @@ body {
   margin-top: 100px;
 }
 
+.page-content h4 {
+  text-align: center;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
 .page-content ol {
   width: 60%;
   margin: 0 auto;
@@ -329,12 +339,32 @@ body {
 .post-title {
   text-align: center;
   color: #fff;
-  /* font-family: "Montserrat", sans-serif; */
   font-family: "Bebas Neue", sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
-  max-width: 1060px;
+}
+
+.post-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: justify;
+  color: #ddd;
+}
+
+.post-link-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.post-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: right;
 }
 
 /* ================================================================ 
@@ -503,7 +533,6 @@ body {
 .section-title h4 {
   text-align: center;
   color: #fff;
-  /* font-family: "Montserrat", sans-serif; */
   font-family: "Bebas Neue", sans-serif;
   font-size: 36px;
   font-weight: 500;
@@ -557,7 +586,7 @@ body {
 
 .message-text {
   font-family: "Montserrat";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.6;
   text-align: center;
