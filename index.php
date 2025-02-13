@@ -18,11 +18,18 @@
       <?php if(have_posts()): while(have_posts()): the_post(); ?>
         <article class ="post-frame" <?php post_class(); ?>>
           <?php if(has_post_thumbnail()): ?>
-            <figure class="post-thumbnail"><?php the_post_thumbnail(); ?></figure>
+            <figure class="post-thumbnail">
+              <a href="<?php the_permalink()?>">
+                <?php the_post_thumbnail(); ?>
+              </a>
+            </figure>
           <?php endif; ?>
-          <?php the_title( '<h3 class="post-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h3>' ); ?>
-          <span class="message-text">
+          <?php the_title( '<h4 class="post-title">', '</h4>' ); ?>
+          <span class="post-text">
             <?php the_excerpt(); ?>
+          </span>
+          <span class="post-link-container">
+            <a href="<?php the_permalink() ?>" class="post-link">Read More</a>
           </span>
         </article>
       <?php endwhile; endif; ?>
