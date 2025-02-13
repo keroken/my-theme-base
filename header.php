@@ -32,8 +32,8 @@
 			<div class="header-inner section-inner">
 				<div class="header-titles-wrapper">
 					<div class="header-titles">
-						<a href="/">
-							<img src="/images/ISMC_primary_logo.png" alt="ISMC logo" class="primary-logo" />
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/mytheme_base/images/ISMC_primary_logo.png" alt="ISMC logo" class="primary-logo" />
 						</a>
 					</div><!-- .header-titles -->
 				</div><!-- .header-titles-wrapper -->
