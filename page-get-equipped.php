@@ -7,7 +7,7 @@ get_header('supporter');
 $breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
 ?>
 
-<div class="front-bg">
+<div class="supporter-bg">
   <div class="page-hero-container">
     <div class="hero-overlay"></div>
     <div class="page-hero-message">
@@ -19,7 +19,7 @@ $breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
 
       <section <?php post_class(); ?>>
         <div class="content-wrapper">
-          <div class="message-text page-content">
+          <div class="message-text-supporter page-content-supporter">
             <?php the_content(); ?>
           </div>
         </div>
