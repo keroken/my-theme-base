@@ -280,7 +280,7 @@ body {
   font-size: 36px;
   font-weight: 500;
   line-height: 1.2;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .page-content h4 {
@@ -470,13 +470,13 @@ body {
 .donate-container {
   display: flex;
   width: 100%;
-  padding-top: 20px;
+  padding: 20px 0;
   gap: 30px;
 }
 
 .donate-column {
   width: 65%;
-  padding: 20px 0;
+  padding-top: 20px;
   background: #1a437d;
 }
 
