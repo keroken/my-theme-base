@@ -18,6 +18,9 @@
         </span>
       </article>
     <?php endwhile; endif; ?>
+    <div class="back-to-stories">
+      <a href="<?php echo get_post_type_archive_link('post'); ?>" class="post-link">Back to stories</a>
+    </div>
   </main>
 </div>
 
