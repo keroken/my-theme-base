@@ -69,7 +69,9 @@
 					}
 					?>
 				</div><!-- .header-navigation-wrapper -->
-
+        <div>
+          <a href="/get-involved" class="supporter-link">Supporter</a>
+        </div>
 			</div><!-- .header-inner -->
 		</header><!-- #site-header -->
 		<?php
