@@ -90,6 +90,7 @@ body {
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #site-header.scrolled {
@@ -417,6 +418,71 @@ body {
   color: #fff;
   font-size: 16px;
   font-weight: 600;
+}
+
+/* ================================================================ 
+  Supporter Page
+=================================================================== */
+
+.supporter-bg {
+  background: #fff;
+  color: #666;
+  position: relative;
+}
+
+.message-text-supporter {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+}
+
+.page-content-supporter {
+  width: 80%;
+}
+
+.page-content-supporter h3 {
+  text-align: center;
+  color: #333;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 60px;
+}
+
+.page-content-supporter h4 {
+  text-align: center;
+  color: #333;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+/* ================================================================ 
+  Donate Page
+=================================================================== */
+
+.donate-container {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+  gap: 30px;
+}
+
+.donate-column {
+  width: 65%;
+  padding: 20px 0;
+  background: #1a437d;
+}
+
+.donate-text {
+  width: 35%;
+  text-align: left;
 }
 
 /* ================================================================ 
