@@ -11,6 +11,7 @@ function mytheme_setup() {
   // Add custom menu support
   register_nav_menus(array(
     'primary' => 'Primary Menu',
+    'supporter' => 'Supporter Menu',
   ));
 }
 add_action('after_setup_theme', 'mytheme_setup');
