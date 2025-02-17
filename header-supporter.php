@@ -70,7 +70,7 @@
 					?>
 				</div><!-- .header-navigation-wrapper -->
         <div>
-          <a href="/" class="supporter-link">Back to Student Page</a>
+          <a href="/" class="supporter-link">Student Page</a>
         </div>
 			</div><!-- .header-inner -->
 		</header><!-- #site-header -->

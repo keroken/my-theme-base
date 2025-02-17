@@ -157,6 +157,8 @@ body {
 .supporter-link {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  width: 200px;
   height: 100%;
   color: #666;
   font-weight: 600;
