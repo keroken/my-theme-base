@@ -14,7 +14,7 @@ $breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
       <h1><?php the_title(); ?></h1>
     </div>
   </div>
-  <div class="content-area" id="content-area">
+  <div class="content-area" id="page-top">
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
 
       <section <?php post_class(); ?>>

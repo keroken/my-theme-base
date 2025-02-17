@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <main class="post-container" id="content-area">
+  <main class="post-container" id="page-top">
     <div class="page-content">
       <h3>UNITED IN GOD'S GREAT STORIES</h3>
       <div class="message-text about-content">
