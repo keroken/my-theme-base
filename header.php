@@ -70,7 +70,7 @@
 					?>
 				</div><!-- .header-navigation-wrapper -->
         <div>
-          <a href="/get-involved" class="supporter-link">Supporter</a>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>/get-involved/" class="supporter-link">Supporter</a>
         </div>
 			</div><!-- .header-inner -->
 		</header><!-- #site-header -->
