@@ -483,6 +483,28 @@ body {
   margin-top: 20px;
 }
 
+.get-involved-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  margin-top: 60px;
+}
+
+.get-involved-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 420px;
+  height: 300px;
+  padding: 30px;
+  background: #1a437d;
+  color: #fff;
+  & h4 {
+    color: #fff;
+  }
+}
+
 /* ================================================================ 
   Donate Page
 =================================================================== */
@@ -503,6 +525,26 @@ body {
 .donate-text {
   width: 35%;
   text-align: left;
+}
+
+.donate-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.donate-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 420px;
+  padding: 30px;
+  background: #1a437d;
+  color: #fff;
+  & h4 {
+    color: #fff;
+  }
 }
 
 /* ================================================================ 
