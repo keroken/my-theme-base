@@ -212,7 +212,11 @@ function front_page_custom_javascript() {
       </script>
   <?php
 }
-add_action('wp_head', 'front_page_custom_javascript');
+add_action('wp_head', function() {
+  if (is_front_page()) {
+    front_page_custom_javascript();
+  }
+});
 
 function header_custom_javascript() {
   ?>
@@ -229,3 +233,79 @@ function header_custom_javascript() {
   <?php
 }
 add_action('wp_head', 'header_custom_javascript');
+
+function story_page_custom_javascript () {
+  ?>
+      <script type="text/javascript">
+        window.addEventListener('load', () => {
+          const overlay = document.querySelector('.overlay');
+
+          const storyDialogs = document.querySelectorAll('.story-modal');
+
+          const closeButtons = document.querySelectorAll('.close-button');
+          const closeButtonBottoms = document.querySelectorAll('.close-button-bottom');
+
+          const storyButtons = document.querySelectorAll('.story-button');
+          const readMoreButtons = document.querySelectorAll('.read-more-button');
+
+          const openDialog = (index) => {
+            storyDialogs[index].showModal();
+            storyDialogs[index].classList.add('show-modal');
+            overlay.style.display = 'block';
+            document.documentElement.style.overflow = "hidden";
+          };
+
+          storyButtons.forEach((storyButton, index) => {
+            storyButton.addEventListener('click', () => {
+              openDialog(index);
+            });
+          });
+
+          readMoreButtons.forEach((readMoreButton, index) => {
+            readMoreButton.addEventListener('click', () => {
+              openDialog(index);
+            });
+          });
+
+          closeButtons.forEach((closeButton, index) => {
+            closeButton.addEventListener('click', () => {
+              storyDialogs.forEach((storyDialog) => {
+                storyDialogs[index].close();
+                overlay.style.display = "none";
+                storyDialogs[index].classList.remove('show-modal');
+                document.documentElement.removeAttribute("style");
+              });
+            });
+          });
+
+          closeButtonBottoms.forEach((closeButtonBottom, index) => {
+            closeButtonBottom.addEventListener('click', () => {
+              storyDialogs.forEach((storyDialog) => {
+                storyDialogs[index].close();
+                overlay.style.display = "none";
+                storyDialogs[index].classList.remove('show-modal');
+                document.documentElement.removeAttribute("style");
+              });
+            });
+          });
+
+          storyDialogs.forEach((storyDialog, index) => {
+            storyDialog.addEventListener('click', (event) => {
+              if (event.target.closest('#dialogInputArea') === null) {
+                storyDialogs[index].close();
+                overlay.style.display = "none";
+                storyDialogs[index].classList.remove('show-modal');
+                document.documentElement.removeAttribute("style");
+              }
+            });
+          });
+
+        });
+      </script>
+  <?php
+}
+add_action('wp_head', function() {
+  if (is_home()) {
+    story_page_custom_javascript();
+  }
+});
