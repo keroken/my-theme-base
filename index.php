@@ -21,6 +21,7 @@
     <div class="post-wrapper">
       <?php if(have_posts()): while(have_posts()): the_post(); ?>
         <article class ="post-frame" <?php post_class(); ?>>
+        <?php if($wp_query->current_post % 2 == 0): ?>
           <?php if(has_post_thumbnail()): ?>
             <figure class="post-thumbnail">
               <a href="<?php the_permalink()?>">
@@ -28,13 +29,33 @@
               </a>
             </figure>
           <?php endif; ?>
-          <?php the_title( '<h4 class="post-title">', '</h4>' ); ?>
-          <span class="post-text">
-            <?php the_excerpt(); ?>
-          </span>
-          <span class="post-link-container">
-            <a href="<?php the_permalink() ?>" class="post-link">Read More</a>
-          </span>
+          <div class="post-content">
+            <?php the_title( '<h4 class="post-title">', '</h4>' ); ?>
+            <span class="post-text">
+              <?php the_excerpt(); ?>
+            </span>
+            <span class="post-link-container">
+              <a href="<?php the_permalink() ?>" class="post-link">Read More</a>
+            </span>
+          </div>
+          <?php else: ?>
+          <div class="post-content">
+            <?php the_title( '<h4 class="post-title">', '</h4>' ); ?>
+            <span class="post-text">
+              <?php the_excerpt(); ?>
+            </span>
+            <span class="post-link-container">
+              <a href="<?php the_permalink() ?>" class="post-link">Read More</a>
+            </span>
+          </div>
+          <?php if(has_post_thumbnail()): ?>
+            <figure class="post-thumbnail">
+              <a href="<?php the_permalink()?>">
+                <?php the_post_thumbnail(); ?>
+              </a>
+            </figure>
+          <?php endif; ?>
+          <?php endif; ?>
         </article>
       <?php endwhile; endif; ?>
     </div>
