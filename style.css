@@ -406,6 +406,17 @@ body {
   font-size: 16px;
   font-weight: 600;
   text-align: right;
+  text-decoration: underline;
+  background: unset;
+  border: none;
+  &:hover {
+    color: #fcba03;
+  }
+}
+
+.story-modal img.attachment-post-thumbnail {
+  width: 100%;
+  height: auto;
 }
 
 /* ================================================================ 
@@ -1005,6 +1016,7 @@ dialog {
   border: none;
   border-radius: 8px;
   background-color: #eee;
+  min-width: fit-content;
 }
 
 .close-button:hover,
