@@ -112,7 +112,7 @@ function front_page_custom_javascript() {
               storyModal.showModal();
               storyModal.classList.add('show-modal');
               storyTitle.innerHTML = `${getStory(storyNumber).name}'s Story`;
-              storyImage.src = `<?php echo esc_url( home_url( '/' )); ?>/wp-content/themes/mytheme_base/images/${getStory(storyNumber).photo}`
+              storyImage.src = `<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/my-theme-base/images/${getStory(storyNumber).photo}`
               storyContent.innerHTML = getStory(storyNumber).text;
               overlay.style.display = 'block';
               document.documentElement.style.overflow = "hidden";
