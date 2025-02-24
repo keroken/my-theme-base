@@ -1,92 +1,32 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: About Page
+ *
+ */
+get_header('supporter'); 
+$breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
+?>
 
-<div class="front-bg">
-  <div class="overlay"></div>
-  <div class="page-hero-area">
-    <div class="page-hero-inner">
-      <div class="page-hero-container">
-        <div class="hero-overlay"></div>
-        <div class="page-hero-message">
-          <h1>Stories</h1>
-        </div>
-      </div>
+<div class="supporter-bg">
+  <div class="page-hero-container">
+    <div class="hero-overlay"></div>
+    <div class="page-hero-message">
+      <h1><?php the_title(); ?></h1>
     </div>
   </div>
-  <main class="post-container">
-    <div class="page-content">
-      <h3>UNITED IN GOD'S GREAT STORIES</h3>
-      <div class="message-text about-content">
-        <p>Sharing from students, volunteers and staff</p>
-      </div>
-    </div>
-    <div class="post-wrapper">
-      <?php if(have_posts()): while(have_posts()): the_post(); ?>
-        <article class ="post-frame" <?php post_class(); ?>>
-        <?php if($wp_query->current_post % 2 == 0): ?>
-          <?php if(has_post_thumbnail()): ?>
-            <figure class="post-thumbnail">
-              <button class="story-circle-button story-button">
-                <?php the_post_thumbnail(); ?>
-              </button>
-            </figure>
-          <?php endif; ?>
-          <div class="post-content">
-            <?php the_title( '<h4 class="post-title">', '</h4>' ); ?>
-            <span class="post-text">
-              <?php the_excerpt(); ?>
-            </span>
-            <span class="post-link-container">
-              <button class="post-link read-more-button">Read More</button>
-            </span>
+  <div class="content-area">
+    <?php if(have_posts()): while(have_posts()): the_post(); ?>
+
+      <section <?php post_class(); ?>>
+        <div class="content-wrapper">
+          <div class="message-text-supporter page-content-supporter">
+            <?php the_content(); ?>
           </div>
-          <dialog class="story-modal">
-            <div id="dialogInputArea">
-              <div class="dialog-header">
-                  <p id="story-title"><?php the_title() ?></p>
-                  <button class="close-button">Close Story</button>
-              </div>
-              <div class="story-body">
-                <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
-                <p id="story-content"><?php the_content() ?></p>
-              </div>
-              <button class="close-button-bottom">Close Story</button>
-            </div>
-          </dialog>
-          <?php else: ?>
-          <div class="post-content">
-            <?php the_title( '<h4 class="post-title">', '</h4>' ); ?>
-            <span class="post-text">
-              <?php the_excerpt(); ?>
-            </span>
-            <span class="post-link-container">
-              <button class="post-link read-more-button">Read More</button>
-            </span>
-          </div>
-          <?php if(has_post_thumbnail()): ?>
-            <figure class="post-thumbnail">
-              <button class="story-circle-button story-button">
-                <?php the_post_thumbnail(); ?>
-              </button>
-            </figure>
-          <?php endif; ?>
-          <dialog class="story-modal">
-            <div id="dialogInputArea">
-              <div class="dialog-header">
-                  <p id="story-title"><?php the_title() ?></p>
-                  <button class="close-button">Close Story</button>
-              </div>
-              <div class="story-body">
-                <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
-                <p id="story-content"><?php the_content() ?></p>
-              </div>
-              <button class="close-button-bottom">Close Story</button>
-            </div>
-          </dialog>
-          <?php endif; ?>
-        </article>
-      <?php endwhile; endif; ?>
-    </div>
-  </main>
+        </div>
+      </section>
+
+    <?php endwhile; endif; ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>
