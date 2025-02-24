@@ -12,7 +12,7 @@
       </div>
     </div>
   </div>
-  <main class="post-container" id="page-top">
+  <main class="post-container">
     <div class="page-content">
       <h3>UNITED IN GOD'S GREAT STORIES</h3>
       <div class="message-text about-content">

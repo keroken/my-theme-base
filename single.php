@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <main class="single-container" id="page-top">
+  <main class="single-container">
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
       <article class ="single-article" <?php post_class(); ?>>
         <?php if(has_post_thumbnail()): ?>
