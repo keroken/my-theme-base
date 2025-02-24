@@ -40,6 +40,7 @@ function front_page_custom_javascript() {
       window.addEventListener('load', () => {
           const overlay = document.querySelector('.overlay');
 
+          const toTheTopButton = document.querySelector('.to-the-top');
           const storyModal = document.querySelector('.story-modal');
           const storyTitle = document.getElementById('story-title');
           const storyImage = document.getElementById('story-image');
@@ -175,6 +176,12 @@ function front_page_custom_javascript() {
                   }
               }
           }
+          toTheTopButton.addEventListener('click', () => {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      });
       });
 
       class ParallaxEffectBackground {
@@ -221,6 +228,17 @@ add_action('wp_head', function() {
 function header_custom_javascript() {
   ?>
       <script type="text/javascript">
+          window.addEventListener('load', () => {
+              const toTheTopButton = document.querySelector('.to-the-top');
+
+              toTheTopButton.addEventListener('click', () => {
+                  window.scrollTo({
+                      top: 0,
+                      behavior: 'smooth'
+                  });
+              });
+          });
+          
           window.addEventListener('scroll', function() {
               let siteHeader = document.getElementById('site-header');
               if (window.pageYOffset > 0) {
@@ -228,7 +246,7 @@ function header_custom_javascript() {
               } else {
                   siteHeader.classList.remove('scrolled');
               }
-          })
+          });
       </script>
   <?php
 }
