@@ -531,6 +531,13 @@ body {
   width: 100%;
   padding: 20px 0;
   gap: 30px;
+  & a {
+    color: #ffd45c;
+    font-weight: 500;
+    &:hover {
+      color: #fcba03;
+    }
+  }
 }
 
 .donate-column {
@@ -562,6 +569,17 @@ body {
   color: #fff;
   & h4 {
     color: #fff;
+  }
+  & li {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  & a {
+    color: #ffd45c;
+    font-weight: 500;
+    &:hover {
+      color: #fcba03;
+    }
   }
 }
 
@@ -969,7 +987,7 @@ body {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 500;
   color: #ffd45c;
 }
 
