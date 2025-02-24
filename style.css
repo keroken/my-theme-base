@@ -59,14 +59,9 @@ a {
 button {
   color: unset;
   padding: unset;
+  border: unset;
+  background: unset;
   text-transform: unset;
-  font-size: unset;
-  font-weight: unset;
-  line-height: unset;
-  letter-spacing: normal;
-  transition: none;
-  padding-block: 1px;
-  padding-inline: 6px;
   cursor: pointer;
 }
 
@@ -407,8 +402,6 @@ body {
   font-weight: 600;
   text-align: right;
   text-decoration: underline;
-  background: unset;
-  border: none;
   &:hover {
     color: #fcba03;
   }
@@ -990,6 +983,10 @@ dialog {
   transition: opacity 1s ease-in-out;
 }
 
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .show-modal {
   display: block;
   opacity: 1;
@@ -1017,6 +1014,7 @@ dialog {
   border-radius: 8px;
   background-color: #eee;
   min-width: fit-content;
+  padding: 2px 8px;
 }
 
 .close-button:hover,
