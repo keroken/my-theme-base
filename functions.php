@@ -237,15 +237,15 @@ function header_custom_javascript() {
               hamburgerButton.addEventListener('click', () => {
                   primaryMenu.classList.toggle('show-menu');
                   navWrapper.classList.toggle('justify-content-start');
-                  hamburgerButton.style.display = 'none';
-                  closeMenuButton.style.display = 'block';
+                  hamburgerButton.classList.toggle('show-menu');
+                  closeMenuButton.classList.toggle('show-menu');
               });
 
               closeMenuButton.addEventListener('click', () => {
                   primaryMenu.classList.toggle('show-menu');
                   navWrapper.classList.toggle('justify-content-start');
-                  hamburgerButton.style.display = 'block';
-                  closeMenuButton.style.display = 'none';
+                  hamburgerButton.classList.toggle('show-menu');
+                  closeMenuButton.classList.toggle('show-menu');
               });
 
               toTheTopButton.addEventListener('click', () => {
