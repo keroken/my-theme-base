@@ -234,12 +234,6 @@ body {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 1040px) {
-  #hamburger-button {
-    display: block;
-  }
-}
-
 #close-menu-button {
   display: none;
   width: 60px;
@@ -250,6 +244,18 @@ body {
   fill: #333;
   padding: 15px;
   margin-right: 20px;
+}
+
+@media screen and (max-width: 1040px) {
+  #hamburger-button {
+    display: block;
+  }
+  #hamburger-button.show-menu {
+    display: none;
+  }
+  #close-menu-button.show-menu {
+    display: block;
+  }
 }
 
 /* ================================================================ 
