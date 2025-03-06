@@ -237,7 +237,7 @@ body {
 }
 
 /* ================================================================ 
-  Page
+  General Page styles
 =================================================================== */
 .page-hero-area {
   position: relative;
@@ -315,6 +315,10 @@ body {
   text-align: left;
 }
 
+/* ================================================================ 
+  About Page
+=================================================================== */
+
 .about-stats {
   display: flex;
   flex-direction: column;
@@ -328,6 +332,10 @@ body {
   width: 100%;
 }
 
+/* ================================================================ 
+  Programs Page
+=================================================================== */
+
 .programs-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -335,11 +343,16 @@ body {
   margin-top: 60px;
 }
 
+@media screen and (max-width: 1200px) {
+  .programs-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .programs-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 420px;
   padding: 20px;
   & img {
     border-radius: 24px;
@@ -520,13 +533,18 @@ body {
   margin-top: 60px;
 }
 
+@media screen and (max-width: 1200px) {
+  .get-involved-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .get-involved-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 20px;
-  max-width: 420px;
   height: 300px;
   padding: 30px;
   background: #1a437d;
@@ -546,7 +564,8 @@ body {
 =================================================================== */
 
 .donate-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 35% 65%;
   width: 100%;
   padding: 20px 0;
   gap: 30px;
@@ -559,14 +578,18 @@ body {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .donate-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 .donate-column {
-  width: 65%;
   padding-top: 20px;
   background: #1a437d;
 }
 
 .donate-text {
-  width: 35%;
   text-align: left;
 }
 
@@ -584,11 +607,16 @@ body {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .donate-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .donate-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 420px;
   padding: 30px;
   background: #1a437d;
   text-align: left;
