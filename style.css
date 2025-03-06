@@ -94,13 +94,16 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.header-titles-wrapper {
+  padding-left: 40px;
+}
+
 .header-titles {
   margin: 0;
 }
 
 .header-inner {
   display: flex;
-  padding: 0 40px;
   height: 100%;
 }
 
@@ -122,9 +125,34 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1040px) {
+  .header-navigation-wrapper {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+}
+
 .primary-menu-wrapper {
   height: 100%;
   padding: 60px;
+  & li:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .primary-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    & li:last-child {
+      display: block;
+      border-top: 1px solid #ddd;
+    }
+  }
 }
 
 .primary-menu {
@@ -135,9 +163,35 @@ body {
   height: 100%;
 }
 
+@media screen and (max-width: 1040px) {
+  .primary-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    height: auto;
+  }
+  .primary-menu.show-menu {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    transition: all 0.3s ease-in-out;
+  }
+  .primary-menu.scrolled {
+    top: 60px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
 .primary-menu li {
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1040px) {
+  .primary-menu li {
+    padding: 20px 0;
+    text-align: center;
+  }
 }
 
 .primary-menu a {
@@ -149,7 +203,7 @@ body {
   }
 }
 
-.supporter-link {
+.left-link {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -159,6 +213,43 @@ body {
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 1040px) {
+  .left-link {
+    display: none;
+  }
+}
+
+#hamburger-button {
+  display: none;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: #333;
+  padding: 15px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 1040px) {
+  #hamburger-button {
+    display: block;
+  }
+}
+
+#close-menu-button {
+  display: none;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: #333;
+  padding: 15px;
+  margin-right: 20px;
 }
 
 /* ================================================================ 
