@@ -267,7 +267,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 360px;
+  min-height: 360px;
   background-color: rgb(17, 48, 86);
   padding: 60px 80px;
   color: rgb(142, 169, 220);
@@ -285,13 +285,23 @@ body {
   column-gap: 100px;
 }
 
+@media screen and (max-width: 1040px) {
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 40px;
+  }
+}
+
 .footer-column {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
   & h4 {
     font-size: 24px;
     font-weight: 600;
+    margin-bottom: 24px;
   }
 }
 
@@ -299,6 +309,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
 }
 
 .contact-line {
@@ -310,9 +326,16 @@ body {
 }
 
 .contact-icon {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   color: rgb(142, 169, 220);
+}
+
+.footer-credits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .to-the-top {
@@ -412,6 +435,12 @@ body {
   text-align: left;
 }
 
+@media screen and (max-width: 800px) {
+  .page-content ol {
+    width: 100%;
+  }
+}
+
 /* ================================================================ 
   About Page
 =================================================================== */
@@ -436,13 +465,14 @@ body {
 .programs-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 60px;
   margin-top: 60px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .programs-list {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -450,9 +480,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   & img {
     border-radius: 24px;
+    width: 100%;
   }
 }
 
@@ -983,7 +1013,17 @@ body {
   width: 90%;
 }
 
+@media screen and (max-width: 800px) {
+  .stats-row {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
 .stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
