@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Page
+ * Template Name: Index Page
  *
  */
 get_header('supporter'); 
@@ -17,7 +17,7 @@ $breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
   <div class="content-area">
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
 
-      <section <?php post_class(); ?>>
+      <section>
         <div class="content-wrapper">
           <div class="message-text-supporter page-content-supporter">
             <?php the_content(); ?>
