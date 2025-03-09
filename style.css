@@ -946,14 +946,17 @@ body {
 }
 
 .cta-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   margin-top: 60px;
-  width: 240px;
-  height: 60px;
-  border-radius: 8px;
+  width: 120px;
+  height: 40px;
+  border-radius: 18px;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: #fcba03;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   color: #222;
@@ -1409,6 +1412,27 @@ dialog {
   dialog {
     width: unset;
     max-width: 95%;
+  }
+}
+
+/* ================================================================ 
+  40years Page
+=================================================================== */
+
+.forty-years-section {
+  width: 100%;
+}
+
+.forty-years-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+}
+
+@media screen and (max-width: 800px) {
+  .forty-years-column {
+    width: 100%;
   }
 }
 
