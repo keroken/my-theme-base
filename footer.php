@@ -41,7 +41,7 @@
 					</div>
 					<div class="footer-column">
 						<h4>Staff</h4>
-						<a href="/">Login</a>
+						<a href="<?php echo esc_url( home_url( '/staff' ) ); ?>">Login</a>
 					</div>
 				</div><!-- .footer-inner -->
 

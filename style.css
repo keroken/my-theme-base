@@ -266,7 +266,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  row-gap: 60px;
   min-height: 360px;
   background-color: rgb(17, 48, 86);
   padding: 60px 80px;
@@ -335,7 +335,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
 }
 
 .to-the-top {
