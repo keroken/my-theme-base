@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Page
+ * Template Name: Pray Page
  *
  */
 get_header('supporter'); 
