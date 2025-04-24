@@ -1,19 +1,15 @@
 <?php get_header(); ?>
 
-<div class="front-bg">
-  <div class="page-hero-area">
-    <div class="page-hero-inner">
-      <div class="page-hero-container">
-        <div class="hero-overlay"></div>
-        <div class="page-hero-message">
-          <h1><?php the_title(); ?></h1>
-        </div>
-      </div>
+<div class="supporter-bg">
+  <div class="page-hero-container">
+    <div class="hero-overlay"></div>
+    <div class="page-hero-message">
+      <h1><?php the_title(); ?></h1>
     </div>
   </div>
-  <main class="single-container">
+  <main class="content-area">
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
-      <article class ="single-article single-text" <?php post_class(); ?>>
+      <article class ="single-article single-text=supporter" <?php post_class(); ?>>
         <div class="single-staff-header">
           <?php if(has_post_thumbnail()): ?>
             <figure class="single-staff-thumbnail"><?php the_post_thumbnail(); ?></figure>
