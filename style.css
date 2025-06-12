@@ -997,8 +997,13 @@ hr {
   Front Page
 =================================================================== */
 .front-bg {
-  background: #1c57a1;
+  width: 100vw;
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #1c57a1;
 }
 
 .overlay {
@@ -1598,5 +1603,117 @@ dialog {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ================================================================ 
+  Find Your City Page
+=================================================================== */
+
+.find-your-city-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.map-container {
+  flex: 2;
+  min-height: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+#canada-map {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.city-info {
+  flex: 1;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.city-info h2 {
+  margin-top: 0;
+  color: #fcba03;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.city-info p {
+  color: #ddd;
+}
+
+.city-details {
+  display: none;
+}
+
+.city-details.active {
+  display: block;
+}
+
+.city-details h3 {
+  margin-top: 0;
+  color: #fcba03;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.city-details .contact-info {
+  margin: 1rem 0;
+  color: #ddd;
+}
+
+.city-details .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.city-details .social-links a {
+  color: #fcba03;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.city-details .social-links a:hover {
+  color: #ffd45c;
+}
+
+/* Ensure Leaflet map tiles are visible */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-tile-pane {
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .find-your-city-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .map-container {
+    min-height: 400px;
+  }
+
+  .city-info {
+    margin-top: 1rem;
   }
 }

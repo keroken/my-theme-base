@@ -5,97 +5,17 @@
 
 get_header(); ?>
 
-<div class="find-your-city-container">
-    <div class="map-container">
-        <div id="canada-map" style="height: 600px; width: 100%;"></div>
-    </div>
-    <div class="city-info" id="city-info">
-        <h2>Select a City</h2>
-        <p>Click on a city marker to view more information.</p>
+<div class="front-bg">
+    <div class="find-your-city-container">
+        <div class="map-container">
+            <div id="canada-map" style="height: 600px; width: 100%;"></div>
+        </div>
+        <div class="city-info" id="city-info">
+            <h2>Select a City</h2>
+            <p>Click on a city marker to view more information.</p>
+        </div>
     </div>
 </div>
-
-<style>
-.find-your-city-container {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.map-container {
-    flex: 2;
-    min-height: 600px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-#canada-map {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
-
-.city-info {
-    flex: 1;
-    padding: 1.5rem;
-    background: #f5f5f5;
-    border-radius: 8px;
-}
-
-.city-info h2 {
-    margin-top: 0;
-    color: #333;
-}
-
-.city-info p {
-    color: #666;
-}
-
-.city-details {
-    display: none;
-}
-
-.city-details.active {
-    display: block;
-}
-
-.city-details h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-.city-details .contact-info {
-    margin: 1rem 0;
-}
-
-.city-details .social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.city-details .social-links a {
-    color: #666;
-    text-decoration: none;
-}
-
-.city-details .social-links a:hover {
-    color: #333;
-}
-
-/* Ensure Leaflet map tiles are visible */
-.leaflet-container {
-    height: 100%;
-    width: 100%;
-}
-
-.leaflet-tile-pane {
-    opacity: 1;
-}
-</style>
 
 <!-- Load Leaflet CSS first -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
