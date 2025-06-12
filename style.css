@@ -210,6 +210,10 @@ hr {
   }
 }
 
+.primary-menu .current-menu-item a {
+  color: #fcba03;
+}
+
 .left-link {
   display: flex;
   align-items: center;
