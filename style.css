@@ -1146,6 +1146,9 @@ hr {
 }
 
 @media screen and (max-width: 800px) {
+  .section-stats {
+    height: 1000px;
+  }
   .stats-row {
     flex-direction: column;
     gap: 60px;
