@@ -1118,10 +1118,6 @@ hr {
   align-items: center;
 }
 
-.opacity0 {
-  opacity: 0;
-}
-
 .section-stats {
   height: 500px;
 }
@@ -1586,7 +1582,7 @@ dialog {
 
 @keyframes fadeIn {
   0% {
-    opacity: 0;
+    opacity: 0.6;
     transform: translateY(0);
   }
   100% {
