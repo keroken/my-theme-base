@@ -37,10 +37,9 @@ add_action('wp_enqueue_scripts', 'mytheme_enqueue');
 function front_page_custom_javascript() {
   ?>
       <script type="text/javascript">
-      window.addEventListener('load', () => {
+      document.addEventListener('DOMContentLoaded', () => {
           const overlay = document.querySelector('.overlay');
 
-          const toTheTopButton = document.querySelector('.to-the-top');
           const storyModal = document.querySelector('.story-modal');
           const storyTitle = document.getElementById('story-title');
           const storyImage = document.getElementById('story-image');
@@ -163,25 +162,11 @@ function front_page_custom_javascript() {
 
           const elementsArray = document.querySelectorAll(".fade");
 
-          window.addEventListener('scroll', fadeIn);
-          function fadeIn() {
-              for (let i = 0; i < elementsArray.length; i++) {
-                  const elem = elementsArray[i];
-                  const distInView = elem.getBoundingClientRect().top - window.innerHeight + 20;
-
-                  if (distInView < 0) {
-                      elem.classList.add("fadeIn");
-                  } else {
-                      elem.classList.remove("fadeIn");
-                  }
-              }
+          for (let i = 0; i < elementsArray.length; i++) {
+              elementsArray[i].classList.add("fadeIn");
           }
-          toTheTopButton.addEventListener('click', () => {
-          window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-          });
-      });
+
+
       });
 
       class ParallaxEffectBackground {
@@ -229,7 +214,6 @@ function header_custom_javascript() {
   ?>
       <script type="text/javascript">
           window.addEventListener('load', () => {
-              const toTheTopButton = document.querySelector('.to-the-top');
               const hamburgerButton = document.getElementById('hamburger-button');
               const closeMenuButton = document.getElementById('close-menu-button');
               const primaryMenu = document.getElementById('primary-menu');
@@ -246,13 +230,6 @@ function header_custom_javascript() {
                   navWrapper.classList.toggle('justify-content-start');
                   hamburgerButton.classList.toggle('show-menu');
                   closeMenuButton.classList.toggle('show-menu');
-              });
-
-              toTheTopButton.addEventListener('click', () => {
-                  window.scrollTo({
-                      top: 0,
-                      behavior: 'smooth'
-                  });
               });
           });
 

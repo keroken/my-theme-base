@@ -24,7 +24,7 @@ $breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
   </div>
 
   <div class="content-area">
-    <section class="section section-stats opacity0 fade">
+    <section class="section section-stats fade">
       <div class="section-title">
         <h4>Empowering international students to impact the world
   through Jesus Christ</h4>
@@ -48,7 +48,7 @@ $breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
         </div>
       </div>
     </section>
-    <section class="section section-stories opacity0 fade">
+    <section class="section section-stories fade">
       <div class="section-title">
         <h4>A local community with global impact</h4>
       </div>
