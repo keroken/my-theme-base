@@ -1617,8 +1617,10 @@ dialog {
   display: flex;
   gap: 2rem;
   padding: 2rem;
+  height: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  overflow: auto;
   color: #fff;
 }
 
@@ -1713,10 +1715,11 @@ dialog {
   }
 
   .map-container {
-    min-height: 400px;
+    max-height: 400px;
+    min-height: unset;
   }
 
   .city-info {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 }
