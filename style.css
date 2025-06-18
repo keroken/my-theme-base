@@ -1719,10 +1719,11 @@ dialog {
   .find-your-city-container {
     flex-direction: column;
     padding: 1rem;
+    gap: 0.5rem;
   }
 
   .map-container {
-    max-height: 400px;
+    max-height: 300px;
     min-height: unset;
   }
 
