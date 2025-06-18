@@ -1102,6 +1102,13 @@ hr {
   background-color: #f7da79;
 }
 
+/* Hide CTA button on mobile devices */
+@media screen and (max-width: 768px) {
+  .cta-button {
+    display: none;
+  }
+}
+
 .content-area {
   max-width: 1440px;
   display: flex;
