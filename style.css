@@ -142,9 +142,6 @@ hr {
 .primary-menu-wrapper {
   height: 100%;
   padding: 60px;
-  & li:last-child {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1040px) {

@@ -10,6 +10,7 @@
 	<head>
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
+		<?php mytheme_seo_meta_tags(); ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -64,7 +65,7 @@
 					?>
 				</div><!-- .header-navigation-wrapper -->
         <div>
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="left-link">Student Page</a>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="left-link">Student Pages</a>
         </div>
 			</div><!-- .header-inner -->
 		</header><!-- #site-header -->
