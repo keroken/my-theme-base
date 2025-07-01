@@ -142,6 +142,9 @@ hr {
 .primary-menu-wrapper {
   height: 100%;
   padding: 60px;
+  & li:last-child {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1040px) {
@@ -1462,6 +1465,40 @@ dialog {
 #story-content {
   font-size: 15px;
   line-height: 26px;
+}
+
+.story-body {
+  margin-bottom: 20px;
+}
+
+.story-image-container {
+  width: 50%;
+  float: left;
+  margin-right: 20px;
+}
+
+.story-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#story-content {
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .story-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .story-image-container {
+    float: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .close-button,

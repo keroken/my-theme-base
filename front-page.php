@@ -115,8 +115,10 @@ diaspora communities like international students.</p>
         <button class="close-button">Close Story</button>
     </div>
     <div class="story-body">
-      <p style="width:50%; float:left; margin-right:12px"><img id="story-image" src="/" /></p>
-      <p id="story-content"></p>
+      <div class="story-image-container">
+        <img id="story-image" src="" alt="Story image" />
+      </div>
+      <div id="story-content"></div>
     </div>
     <button class="close-button-bottom">Close Story</button>
   </div>
