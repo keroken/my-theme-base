@@ -41,7 +41,7 @@
 					</div>
 					<div class="footer-column">
 						<h4>Staff</h4>
-						<a href="<?php echo esc_url( home_url( '/staff' ) ); ?>">Login</a>
+						<a href="https://sites.google.com/ismc.ca/staffroom/home" target="_blank">Login</a>
 					</div>
 				</div><!-- .footer-inner -->
 
