@@ -44,65 +44,65 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Victoria',
             lat: 48.4284,
             lng: -123.3656,
-            contact: '250-555-1234',
-            email: 'victoria@example.com',
-            website: 'https://victoria.example.com',
+            staff_name: 'Sandi Mcdougall',
+            email: 'sandi.mcdougall@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/victoria',
-                twitter: 'https://twitter.com/victoria',
-                instagram: 'https://instagram.com/victoria'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'Vancouver',
             lat: 49.2827,
             lng: -123.1207,
-            contact: '604-555-1234',
-            email: 'vancouver@example.com',
-            website: 'https://vancouver.example.com',
+            staff_name: 'Izumi Araki',
+            email: 'izumi.araki@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/vancouver',
-                twitter: 'https://twitter.com/vancouver',
-                instagram: 'https://instagram.com/vancouver'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'Surrey',
             lat: 49.1913,
             lng: -122.8490,
-            contact: '604-555-1234',
-            email: 'surrey@example.com',
-            website: 'https://surrey.example.com',
+            staff_name: 'Jessica Mamouler',
+            email: 'jessica.mamouler@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/surrey',
-                twitter: 'https://twitter.com/surrey',
-                instagram: 'https://instagram.com/surrey'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'Kelowna',
             lat: 49.8877,
             lng: -119.4960,
-            contact: '250-555-1234',
-            email: 'kelowna@example.com',
-            website: 'https://kelowna.example.com',
+            staff_name: 'Rick Wilgosh',
+            email: 'rick.wilgosh@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/kelowna',
-                twitter: 'https://twitter.com/kelowna',
-                instagram: 'https://instagram.com/kelowna'
+                facebook: 'https://www.facebook.com/utalkspage/',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'Kamloops',
             lat: 50.6745,
             lng: -120.3273,
-            contact: '250-555-1234',
-            email: 'kamloops@example.com',
-            website: 'https://kamloops.example.com',
+            staff_name: 'Jeff Torrans',
+            email: 'jeff.torrans@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/kamloops',
-                twitter: 'https://twitter.com/kamloops',
-                instagram: 'https://instagram.com/kamloops'
+                facebook: 'https://www.facebook.com/groups/FocusClubTRU/',
+                twitter: '',
+                instagram: ''
             }
         },
         // Alberta
@@ -110,26 +110,26 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Calgary',
             lat: 51.0447,
             lng: -114.0719,
-            contact: '403-555-1234',
-            email: 'calgary@example.com',
-            website: 'https://calgary.example.com',
+            staff_name: 'Cleuber De Sousa',
+            email: 'cleuber.desousa@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/calgary',
-                twitter: 'https://twitter.com/calgary',
-                instagram: 'https://instagram.com/calgary'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'Edmonton',
             lat: 53.5461,
             lng: -113.4938,
-            contact: '780-555-1234',
-            email: 'edmonton@example.com',
-            website: 'https://edmonton.example.com',
+            staff_name: 'Gary Short',
+            email: 'gary.short@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/edmonton',
-                twitter: 'https://twitter.com/edmonton',
-                instagram: 'https://instagram.com/edmonton'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         // Saskatchewan
@@ -137,26 +137,26 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Regina',
             lat: 50.4452,
             lng: -104.6189,
-            contact: '306-555-1234',
-            email: 'regina@example.com',
-            website: 'https://regina.example.com',
+            staff_name: 'Leighton Gust',
+            email: 'leighton.gust@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/regina',
-                twitter: 'https://twitter.com/regina',
-                instagram: 'https://instagram.com/regina'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'Saskatoon',
             lat: 52.1332,
             lng: -106.6700,
-            contact: '306-555-1234',
-            email: 'saskatoon@example.com',
-            website: 'https://saskatoon.example.com',
+            staff_name: 'Cam Janzen',
+            email: 'cam.janzen@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/saskatoon',
-                twitter: 'https://twitter.com/saskatoon',
-                instagram: 'https://instagram.com/saskatoon'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         // Manitoba
@@ -164,13 +164,13 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Winnipeg',
             lat: 49.8951,
             lng: -97.1384,
-            contact: '204-555-1234',
-            email: 'winnipeg@example.com',
-            website: 'https://winnipeg.example.com',
+            staff_name: 'Frieda Martens',
+            email: 'frieda.martens@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/winnipeg',
-                twitter: 'https://twitter.com/winnipeg',
-                instagram: 'https://instagram.com/winnipeg'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         // Ontario
@@ -178,104 +178,104 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Kitchener-Waterloo',
             lat: 43.4516,
             lng: -80.4925,
-            contact: '519-555-1234',
-            email: 'kw@example.com',
-            website: 'https://kw.example.com',
+            staff_name: 'Dorothy Tam',
+            email: 'dorothy.tam@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/kitchenerwaterloo',
-                twitter: 'https://twitter.com/kitchenerwaterloo',
-                instagram: 'https://instagram.com/kitchenerwaterloo'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'Guelph',
             lat: 43.5448,
             lng: -80.2482,
-            contact: '519-555-1234',
-            email: 'guelph@example.com',
-            website: 'https://guelph.example.com',
+            staff_name: 'Karen Ting',
+            email: '',
+            website: 'https://www.guelphinternationalstudents.com',
             social: {
-                facebook: 'https://facebook.com/guelph',
-                twitter: 'https://twitter.com/guelph',
-                instagram: 'https://instagram.com/guelph'
+                facebook: '',
+                twitter: '',
+                instagram: 'https://www.instagram.com/guelphinternationalstudents/'
             }
         },
         {
             name: 'Hamilton',
             lat: 43.5890,
             lng: -79.6441,
-            contact: '905-555-1234',
-            email: 'hamilton@example.com',
-            website: 'https://hamilton.example.com',
+            staff_name: 'Peter Scholtens',
+            email: '',
+            website: 'https://events.helpinginternationalstudents.com/hamilton',
             social: {
-                facebook: 'https://facebook.com/hamilton',
-                twitter: 'https://twitter.com/hamilton',
-                instagram: 'https://instagram.com/hamilton'
+                facebook: '',
+                twitter: '',
+                instagram: 'https://www.instagram.com/hamiltoninternationalstudents/'
             }
         },
         {
             name: 'Brantford',
             lat: 43.1394,
             lng: -80.2644,
-            contact: '519-555-1234',
-            email: 'brantford@example.com',
-            website: 'https://brantford.example.com',
+            staff_name: 'Jason Keuning',
+            email: 'jason.keuning@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/brantford',
-                twitter: 'https://twitter.com/brantford',
-                instagram: 'https://instagram.com/brantford'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'London',
             lat: 42.9849,
             lng: -81.2453,
-            contact: '519-555-1234',
-            email: 'london@example.com',
-            website: 'https://london.example.com',
+            staff_name: 'Stuart Smith',
+            email: '',
+            website: 'https://www.londoninternationalstudents.com',
             social: {
-                facebook: 'https://facebook.com/london',
-                twitter: 'https://twitter.com/london',
-                instagram: 'https://instagram.com/london'
+                facebook: '',
+                twitter: '',
+                instagram: 'https://www.instagram.com/london_international_students/'
             }
         },
         {
             name: 'Niagara',
             lat: 43.0896,
             lng: -79.0849,
-            contact: '905-555-1234',
-            email: 'niagara@example.com',
-            website: 'https://niagara.example.com',
+            staff_name: 'Hilda Vanderklippe',
+            email: '',
+            website: 'https://www.niagarainternationalstudents.com',
             social: {
-                facebook: 'https://facebook.com/niagara',
-                twitter: 'https://twitter.com/niagara',
-                instagram: 'https://instagram.com/niagara'
+                facebook: '',
+                twitter: '',
+                instagram: 'https://www.instagram.com/niagarainternationalstudents/'
             }
         },
         {
             name: 'Toronto',
             lat: 43.6532,
             lng: -79.3832,
-            contact: '416-555-1234',
-            email: 'toronto@example.com',
-            website: 'https://toronto.example.com',
+            staff_name: 'Pin Wong',
+            email: '',
+            website: 'https://events.helpinginternationalstudents.com/toronto',
             social: {
-                facebook: 'https://facebook.com/toronto',
-                twitter: 'https://twitter.com/toronto',
-                instagram: 'https://instagram.com/toronto'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         {
             name: 'Ottawa',
             lat: 45.4215,
             lng: -75.6972,
-            contact: '613-555-1234',
-            email: 'ottawa@example.com',
-            website: 'https://ottawa.example.com',
+            staff_name: 'Vinu Rajus',
+            email: 'vinu.rajus@ismc.ca',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/ottawa',
-                twitter: 'https://twitter.com/ottawa',
-                instagram: 'https://instagram.com/ottawa'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         },
         // Quebec
@@ -283,26 +283,26 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Montreal',
             lat: 45.5017,
             lng: -73.5673,
-            contact: '514-555-1234',
-            email: 'montreal@example.com',
-            website: 'https://montreal.example.com',
+            staff_name: 'Belinda Tam',
+            email: '',
+            website: 'https://www.montrealinternationalstudents.com/',
             social: {
-                facebook: 'https://facebook.com/montreal',
-                twitter: 'https://twitter.com/montreal',
-                instagram: 'https://instagram.com/montreal'
+                facebook: '',
+                twitter: '',
+                instagram: 'https://www.instagram.com/internationalstudentsmontreal'
             }
         },
         {
             name: 'Sherbrooke',
             lat: 45.4000,
             lng: -71.8990,
-            contact: '819-555-1234',
-            email: 'sherbrooke@example.com',
-            website: 'https://sherbrooke.example.com',
+            staff_name: 'Andrey Cañas',
+            email: '',
+            website: '',
             social: {
-                facebook: 'https://facebook.com/sherbrooke',
-                twitter: 'https://twitter.com/sherbrooke',
-                instagram: 'https://instagram.com/sherbrooke'
+                facebook: '',
+                twitter: '',
+                instagram: 'https://www.instagram.com/sherbrooke.int.students/'
             }
         },
         // Nova Scotia
@@ -310,13 +310,13 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Halifax',
             lat: 44.6488,
             lng: -63.5752,
-            contact: '902-555-1234',
-            email: 'halifax@example.com',
-            website: 'https://halifax.example.com',
+            staff_name: 'Chi Perrie',
+            email: '',
+            website: 'https://ismchalifax.ca/',
             social: {
-                facebook: 'https://facebook.com/halifax',
-                twitter: 'https://twitter.com/halifax',
-                instagram: 'https://instagram.com/halifax'
+                facebook: '',
+                twitter: '',
+                instagram: ''
             }
         }
     ];
@@ -347,19 +347,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showCityInfo(city) {
         const cityInfo = document.getElementById('city-info');
+        
+        let contactInfo = '';
+        if (city.staff_name) {
+            contactInfo += `<p><strong>Staff:</strong> ${city.staff_name}</p>`;
+        }
+        if (city.email) {
+            contactInfo += `<p><strong>Email:</strong> <a href="mailto:${city.email}">${city.email}</a></p>`;
+        }
+        if (city.website) {
+            contactInfo += `<p><strong>Website:</strong> <a href="${city.website}" target="_blank">${city.website}</a></p>`;
+        }
+        
+        let socialLinks = '';
+        if (city.social.facebook) {
+            socialLinks += `<a href="${city.social.facebook}" target="_blank">Facebook</a>`;
+        }
+        if (city.social.twitter) {
+            socialLinks += `<a href="${city.social.twitter}" target="_blank">Twitter</a>`;
+        }
+        if (city.social.instagram) {
+            socialLinks += `<a href="${city.social.instagram}" target="_blank">Instagram</a>`;
+        }
+        
         cityInfo.innerHTML = `
             <div class="city-details active">
                 <h3>${city.name}</h3>
-                <div class="contact-info">
-                    <p><strong>Contact:</strong> ${city.contact}</p>
-                    <p><strong>Email:</strong> ${city.email}</p>
-                    <p><strong>Website:</strong> <a href="${city.website}" target="_blank">${city.website}</a></p>
-                </div>
-                <div class="social-links">
-                    <a href="${city.social.facebook}" target="_blank">Facebook</a>
-                    <a href="${city.social.twitter}" target="_blank">Twitter</a>
-                    <a href="${city.social.instagram}" target="_blank">Instagram</a>
-                </div>
+                ${contactInfo ? `<div class="contact-info">${contactInfo}</div>` : ''}
+                ${socialLinks ? `<div class="social-links">${socialLinks}</div>` : ''}
             </div>
         `;
     }
