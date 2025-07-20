@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# WordPress core files
+wp-admin/
+wp-includes/
+wp-content/uploads/
+
+# Images and media files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+*.webp
+
+# Build files
+*.min.js
+*.min.css
+
+# Other files
+.DS_Store
+*.log
+screenshot.png
+
+# Directories to ignore
+images/
+uploads/
+vendor/
+
+# Specific files
+.git/
+*.map 
