@@ -25,7 +25,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
 
       <section <?php post_class(); ?>>
         <div class="content-wrapper">
-          <div class="message-text page-content">
+          <div class="about-text page-content">
             <?php the_content(); ?>
           </div>
         </div>

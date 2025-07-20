@@ -454,18 +454,26 @@ hr {
 /* ================================================================ 
   About Page
 =================================================================== */
-
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.about-text {
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: justify;
+  color: #ddd;
+  width: 50%;
+  & p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
 }
 
-.stats-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+@media screen and (max-width: 800px) {
+  .about-text {
+    font-size: 16px;
+    width: 90%;
+  }
 }
 
 /* ================================================================ 
