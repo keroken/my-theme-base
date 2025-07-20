@@ -61,7 +61,9 @@
 						<?php } ?>
 				</div><!-- .header-navigation-wrapper -->
         <div>
-					<a href="<?php echo esc_url(home_url('/learn')); ?>" class="left-link">Volunteer Pages</a>
+					<a href="<?php echo esc_url(
+						home_url('/learn'),
+					); ?>" class="left-link">Volunteer Pages</a>
         </div>
 			</div><!-- .header-inner -->
 		</header><!-- #site-header -->
