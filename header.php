@@ -62,7 +62,7 @@
 				</div><!-- .header-navigation-wrapper -->
         <div>
 					<a href="<?php echo esc_url(
-						home_url('/learn'),
+						home_url('/find-out'),
 					); ?>" class="left-link">Volunteer Pages</a>
         </div>
 			</div><!-- .header-inner -->
