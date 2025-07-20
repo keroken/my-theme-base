@@ -1789,6 +1789,10 @@ dialog {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.city-info-volunteer {
+  background:#1c57a1;
+}
+
 .city-info h2 {
   margin-top: 0;
   color: #fcba03;
