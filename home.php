@@ -20,10 +20,12 @@
       </div>
     </div>
     <div class="post-wrapper">
-      <?php if(have_posts()): while(have_posts()): the_post(); ?>
+      <?php if (have_posts()):
+        while (have_posts()):
+          the_post(); ?>
         <article class ="post-frame" <?php post_class(); ?>>
-        <?php if($wp_query->current_post % 2 == 0): ?>
-          <?php if(has_post_thumbnail()): ?>
+        <?php if ($wp_query->current_post % 2 == 0): ?>
+          <?php if (has_post_thumbnail()): ?>
             <figure class="post-thumbnail">
               <button class="story-circle-button story-button">
                 <?php the_post_thumbnail(); ?>
@@ -31,7 +33,7 @@
             </figure>
           <?php endif; ?>
           <div class="post-content">
-            <?php the_title( '<h4 class="post-title">', '</h4>' ); ?>
+            <?php the_title('<h4 class="post-title">', '</h4>'); ?>
             <span class="post-text">
               <?php the_excerpt(); ?>
             </span>
@@ -42,19 +44,19 @@
           <dialog class="story-modal">
             <div id="dialogInputArea">
               <div class="dialog-header">
-                  <p id="story-title"><?php the_title() ?></p>
+                  <p id="story-title"><?php the_title(); ?></p>
                   <button class="close-button">Close Story</button>
               </div>
               <div class="story-body">
                 <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
-                <p id="story-content"><?php the_content() ?></p>
+                <p id="story-content"><?php the_content(); ?></p>
               </div>
               <button class="close-button-bottom">Close Story</button>
             </div>
           </dialog>
           <?php else: ?>
           <div class="post-content">
-            <?php the_title( '<h4 class="post-title">', '</h4>' ); ?>
+            <?php the_title('<h4 class="post-title">', '</h4>'); ?>
             <span class="post-text">
               <?php the_excerpt(); ?>
             </span>
@@ -62,7 +64,7 @@
               <button class="post-link read-more-button">Read More</button>
             </span>
           </div>
-          <?php if(has_post_thumbnail()): ?>
+          <?php if (has_post_thumbnail()): ?>
             <figure class="post-thumbnail">
               <button class="story-circle-button story-button">
                 <?php the_post_thumbnail(); ?>
@@ -72,19 +74,21 @@
           <dialog class="story-modal">
             <div id="dialogInputArea">
               <div class="dialog-header">
-                  <p id="story-title"><?php the_title() ?></p>
+                  <p id="story-title"><?php the_title(); ?></p>
                   <button class="close-button">Close Story</button>
               </div>
               <div class="story-body">
                 <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
-                <p id="story-content"><?php the_content() ?></p>
+                <p id="story-content"><?php the_content(); ?></p>
               </div>
               <button class="close-button-bottom">Close Story</button>
             </div>
           </dialog>
           <?php endif; ?>
         </article>
-      <?php endwhile; endif; ?>
+      <?php
+        endwhile;
+      endif; ?>
     </div>
   </main>
 </div>

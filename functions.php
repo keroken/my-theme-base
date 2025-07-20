@@ -9,109 +9,129 @@ function mytheme_setup() {
   add_theme_support('post-thumbnails');
 
   // Add custom menu support
-  register_nav_menus(array(
+  register_nav_menus([
     'primary' => 'Primary Menu',
     'supporter' => 'Supporter Menu',
-  ));
+  ]);
 }
 add_action('after_setup_theme', 'mytheme_setup');
 
 // SEO Meta Tags Function
 function mytheme_seo_meta_tags() {
-    global $post;
-    
-    // Default values
-    $title = get_bloginfo('name');
-    $description = get_bloginfo('description');
-    $keywords = 'international students canada, ISMC, international student ministry, christian ministry canada, student outreach, international student support, canada student ministry, christian international students, student ministry canada, international student christian fellowship';
-    $url = home_url();
-    $image = get_template_directory_uri() . '/images/ISMC_primary_logo.png';
-    
-    // Page/post specific meta
-    if (is_single() || is_page()) {
-        if (has_excerpt()) {
-            $description = get_the_excerpt();
-        } else {
-            $description = wp_trim_words(get_the_content(), 25, '...');
-        }
-        
-        if (has_post_thumbnail()) {
-            $image = get_the_post_thumbnail_url(get_the_ID(), 'large');
-        }
-        
-        $title = get_the_title() . ' - ' . get_bloginfo('name');
-        $url = get_permalink();
-    } elseif (is_home()) {
-        $title = get_bloginfo('name') . ' - International Student Ministry Canada';
-        $description = 'ISMC (International Student Ministry Canada) serves international students across Canada with Christian hospitality, friendship, and spiritual support. Join our community of international students and volunteers.';
-    } elseif (is_category()) {
-        $title = single_cat_title('', false) . ' - ' . get_bloginfo('name');
-        $description = category_description();
-    } elseif (is_tag()) {
-        $title = single_tag_title('', false) . ' - ' . get_bloginfo('name');
-        $description = tag_description();
+  global $post;
+
+  // Default values
+  $title = get_bloginfo('name');
+  $description = get_bloginfo('description');
+  $keywords =
+    'international students canada, ISMC, international student ministry, christian ministry canada, student outreach, international student support, canada student ministry, christian international students, student ministry canada, international student christian fellowship';
+  $url = home_url();
+  $image = get_template_directory_uri() . '/images/ISMC_primary_logo.png';
+
+  // Page/post specific meta
+  if (is_single() || is_page()) {
+    if (has_excerpt()) {
+      $description = get_the_excerpt();
+    } else {
+      $description = wp_trim_words(get_the_content(), 25, '...');
     }
-    
-    // Clean up description
-    $description = wp_strip_all_tags($description);
-    $description = str_replace(["\n", "\r", "\t"], ' ', $description);
-    $description = preg_replace('/\s+/', ' ', $description);
-    $description = trim($description);
-    
-    // Output meta tags
-    echo "\n<!-- SEO Meta Tags -->\n";
-    
-    // Basic meta tags
-    echo '<meta name="description" content="' . esc_attr($description) . '">' . "\n";
-    echo '<meta name="keywords" content="' . esc_attr($keywords) . '">' . "\n";
-    echo '<meta name="author" content="' . esc_attr(get_bloginfo('name')) . '">' . "\n";
-    echo '<meta name="robots" content="index, follow">' . "\n";
-    
-    // Open Graph meta tags
-    echo '<meta property="og:title" content="' . esc_attr($title) . '">' . "\n";
-    echo '<meta property="og:description" content="' . esc_attr($description) . '">' . "\n";
-    echo '<meta property="og:url" content="' . esc_url($url) . '">' . "\n";
-    echo '<meta property="og:site_name" content="' . esc_attr(get_bloginfo('name')) . '">' . "\n";
-    echo '<meta property="og:image" content="' . esc_url($image) . '">' . "\n";
-    echo '<meta property="og:image:width" content="1200">' . "\n";
-    echo '<meta property="og:image:height" content="630">' . "\n";
-    echo '<meta property="og:type" content="' . (is_single() ? 'article' : 'website') . '">' . "\n";
-    echo '<meta property="og:locale" content="en_CA">' . "\n";
-    
-    // Twitter Card meta tags
-    echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
-    echo '<meta name="twitter:title" content="' . esc_attr($title) . '">' . "\n";
-    echo '<meta name="twitter:description" content="' . esc_attr($description) . '">' . "\n";
-    echo '<meta name="twitter:image" content="' . esc_url($image) . '">' . "\n";
-    
-    // Additional SEO meta tags
-    echo '<meta name="geo.region" content="CA">' . "\n";
-    echo '<meta name="geo.placename" content="Canada">' . "\n";
-    echo '<meta name="language" content="English">' . "\n";
-    echo '<meta name="distribution" content="global">' . "\n";
-    echo '<meta name="rating" content="general">' . "\n";
-    
-    // Canonical URL
-    echo '<link rel="canonical" href="' . esc_url($url) . '">' . "\n";
-    
-    echo "<!-- End SEO Meta Tags -->\n";
+
+    if (has_post_thumbnail()) {
+      $image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+    }
+
+    $title = get_the_title() . ' - ' . get_bloginfo('name');
+    $url = get_permalink();
+  } elseif (is_home()) {
+    $title = get_bloginfo('name') . ' - International Student Ministry Canada';
+    $description =
+      'ISMC (International Student Ministry Canada) serves international students across Canada with Christian hospitality, friendship, and spiritual support. Join our community of international students and volunteers.';
+  } elseif (is_category()) {
+    $title = single_cat_title('', false) . ' - ' . get_bloginfo('name');
+    $description = category_description();
+  } elseif (is_tag()) {
+    $title = single_tag_title('', false) . ' - ' . get_bloginfo('name');
+    $description = tag_description();
+  }
+
+  // Clean up description
+  $description = wp_strip_all_tags($description);
+  $description = str_replace(["\n", "\r", "\t"], ' ', $description);
+  $description = preg_replace('/\s+/', ' ', $description);
+  $description = trim($description);
+
+  // Output meta tags
+  echo "\n<!-- SEO Meta Tags -->\n";
+
+  // Basic meta tags
+  echo '<meta name="description" content="' .
+    esc_attr($description) .
+    '">' .
+    "\n";
+  echo '<meta name="keywords" content="' . esc_attr($keywords) . '">' . "\n";
+  echo '<meta name="author" content="' .
+    esc_attr(get_bloginfo('name')) .
+    '">' .
+    "\n";
+  echo '<meta name="robots" content="index, follow">' . "\n";
+
+  // Open Graph meta tags
+  echo '<meta property="og:title" content="' . esc_attr($title) . '">' . "\n";
+  echo '<meta property="og:description" content="' .
+    esc_attr($description) .
+    '">' .
+    "\n";
+  echo '<meta property="og:url" content="' . esc_url($url) . '">' . "\n";
+  echo '<meta property="og:site_name" content="' .
+    esc_attr(get_bloginfo('name')) .
+    '">' .
+    "\n";
+  echo '<meta property="og:image" content="' . esc_url($image) . '">' . "\n";
+  echo '<meta property="og:image:width" content="1200">' . "\n";
+  echo '<meta property="og:image:height" content="630">' . "\n";
+  echo '<meta property="og:type" content="' .
+    (is_single() ? 'article' : 'website') .
+    '">' .
+    "\n";
+  echo '<meta property="og:locale" content="en_CA">' . "\n";
+
+  // Twitter Card meta tags
+  echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+  echo '<meta name="twitter:title" content="' . esc_attr($title) . '">' . "\n";
+  echo '<meta name="twitter:description" content="' .
+    esc_attr($description) .
+    '">' .
+    "\n";
+  echo '<meta name="twitter:image" content="' . esc_url($image) . '">' . "\n";
+
+  // Additional SEO meta tags
+  echo '<meta name="geo.region" content="CA">' . "\n";
+  echo '<meta name="geo.placename" content="Canada">' . "\n";
+  echo '<meta name="language" content="English">' . "\n";
+  echo '<meta name="distribution" content="global">' . "\n";
+  echo '<meta name="rating" content="general">' . "\n";
+
+  // Canonical URL
+  echo '<link rel="canonical" href="' . esc_url($url) . '">' . "\n";
+
+  echo "<!-- End SEO Meta Tags -->\n";
 }
 
 // widget area
 function mytheme_widgets() {
-  register_sidebar(array(
+  register_sidebar([
     'name' => 'Sidebar',
     'id' => 'sidebar-1',
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget' => '</section>',
-  ));
+  ]);
 }
 add_action('widgets_init', 'mytheme_widgets');
 
 // Styles and scripts
 function mytheme_enqueue() {
   // Styles
-  wp_enqueue_style('mytheme-style', get_stylesheet_uri(), array(), date('U'));
+  wp_enqueue_style('mytheme-style', get_stylesheet_uri(), [], date('U'));
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue');
 
@@ -199,7 +219,9 @@ function front_page_custom_javascript() {
           const openModal = (storyNumber) => {
               const story = getStory(storyNumber);
               storyTitle.innerHTML = `${story.name}'s Story`;
-              storyImage.src = `<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/my-theme-base/images/${story.photo}`;
+              storyImage.src = `<?php echo esc_url(
+                home_url('/'),
+              ); ?>wp-content/themes/my-theme-base/images/${story.photo}`;
               storyContent.innerHTML = story.text;
               
               storyModal.showModal();
@@ -309,7 +331,7 @@ function front_page_custom_javascript() {
       </script>
   <?php
 }
-add_action('wp_head', function() {
+add_action('wp_head', function () {
   if (is_front_page()) {
     front_page_custom_javascript();
   }
@@ -354,7 +376,7 @@ function header_custom_javascript() {
 }
 add_action('wp_head', 'header_custom_javascript');
 
-function story_page_custom_javascript () {
+function story_page_custom_javascript() {
   ?>
       <script type="text/javascript">
         window.addEventListener('load', () => {
@@ -424,7 +446,7 @@ function story_page_custom_javascript () {
       </script>
   <?php
 }
-add_action('wp_head', function() {
+add_action('wp_head', function () {
   if (is_home()) {
     story_page_custom_javascript();
   }

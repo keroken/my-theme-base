@@ -3,7 +3,7 @@
  * Template Name: Life in Canada Page
  *
  */
-get_header(); 
+get_header();
 $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
 ?>
 
@@ -19,7 +19,9 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
     </div>
   </div>
   <div class="content-area">
-    <?php if(have_posts()): while(have_posts()): the_post(); ?>
+    <?php if (have_posts()):
+      while (have_posts()):
+        the_post(); ?>
 
       <section <?php post_class(); ?>>
         <div class="content-wrapper">
@@ -29,7 +31,9 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
         </div>
       </section>
 
-    <?php endwhile; endif; ?>
+    <?php
+      endwhile;
+    endif; ?>
   </div>
 </div>
 

@@ -3,8 +3,8 @@
  * Template Name: Front Page
  *
  */
-get_header(); 
-$breadcrumbs_show 			= get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
+get_header();
+$breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
 ?>
 
 <div class="front-bg">
