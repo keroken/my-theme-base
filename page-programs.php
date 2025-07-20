@@ -26,7 +26,20 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
       <section <?php post_class(); ?>>
         <div class="content-wrapper">
           <div class="message-text page-content">
-            <?php the_content(); ?>
+            <h3>NEEDS ARE INFINITE POSSIBILITIES ARE ENDLESS</h3>
+            <p>Our simple and strategic approach will potentially bring thousands of students returning home having been influenced by Christian love, service, and friendship. If they don’t become followers of Christ, they will have the seed of the gospel planted in their hearts. We trust the Holy Spirit will continue working toward their salvation and life transformation.</p>
+            <ul class="programs-list">
+              <?php
+              $programs = json_decode(file_get_contents(get_template_directory() . '/programs-data.json'), true);
+              foreach ($programs['programs'] as $program) {
+                echo '<li>';
+                echo '<img src="' . get_template_directory_uri() . '/images/' . $program['image'] . '" alt="' . $program['title'] . '">';
+                echo '<h4>' . $program['title'] . '</h4>';
+                echo '<p>' . $program['description'] . '</p>';
+                echo '</li>';
+              }
+              ?>
+            </ul>
           </div>
         </div>
       </section>
