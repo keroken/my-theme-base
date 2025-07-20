@@ -2,7 +2,6 @@
 /**
  * Footer for my theme.
  */
-
 ?>
 			<footer id="site-footer" class="header-footer-group">
 				<div class="footer-inner">
@@ -48,24 +47,22 @@
 					<div class="footer-credits">
 						<p class="footer-copyright">&copy;
 							<?php
-							/* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
-							$date_format = _x( 'Y', 'copyright date format' );
-							if ( function_exists( 'wp_date' ) ) {
-								echo wp_date( $date_format );
-							} else {
-								echo date_i18n( $date_format );
-							}
+								/* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
+								$date_format = _x('Y', 'copyright date format');
+								if (function_exists('wp_date')) {
+									echo wp_date($date_format);
+								} else {
+									echo date_i18n($date_format);
+								}
 							?>
-							<?php bloginfo( 'name' ); ?>
+							<?php bloginfo('name'); ?>
 						</p><!-- .footer-copyright -->
-						<?php
-						if ( function_exists( 'the_privacy_policy_link' ) ) {
-							the_privacy_policy_link( '<p class="privacy-policy">', '</p>' );
-						}
-						?>
+						<?php if (function_exists('the_privacy_policy_link')) {
+        the_privacy_policy_link('<p class="privacy-policy">', '</p>');
+      } ?>
 					</div><!-- .footer-credits -->
 
-          <?php get_template_part( 'content', 'cta-button' ); ?>
+          <?php get_template_part('content', 'cta-button'); ?>
 
 			</footer><!-- #site-footer -->
 		<?php wp_footer(); ?>
