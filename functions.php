@@ -337,6 +337,12 @@ add_action('wp_head', function () {
   }
 });
 
+add_action('wp_head', function () {
+  if (is_page('find-out')) {
+    front_page_custom_javascript();
+  }
+});
+
 function header_custom_javascript() {
   ?>
       <script type="text/javascript">
