@@ -919,6 +919,13 @@ hr {
   width: 60%;
 }
 
+.prayer-content img {
+  width: 360px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .sub-title {
   font-weight: 600;
 }

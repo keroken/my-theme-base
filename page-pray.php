@@ -22,7 +22,24 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
       <section <?php post_class(); ?>>
         <div class="content-wrapper">
           <div class="message-text-supporter page-content-supporter prayer-content">
-            <?php the_content(); ?>
+            <h3>Prayer Guide</h3>
+            <p>Become a part of our ministry team by praying for God’s work among international students</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/prayer-guide.png" alt="Prayer Guide">
+            <div class="prayer-guide-frame">
+              <h4>Join Us In Prayer</h4>
+              <p>Develop the habit of praying for international students.</p>
+              <em><strong><a href="https://app.textinchurch.com/connect-cards/cKY7PqTt0w3eVoW9dSWu" target="_blank" rel="noopener noreferrer">Sign up for Uplift: texted requests to pray for international students</a>.</strong></em>
+              <p>You’ll receive:</p>
+              <ol class="prayer-guide-list">
+                <li>weekly prayer points for international students via text message;</li>
+                <li>ideas on how to get involved in reaching out to international students in your neighborhood.</li>
+              </ol>
+              <p>Thank you so much for your prayers! We trust God will use them to reach international students with His love and truth.</p>
+            </div>
+            <h3>Subscribe to DoorWays</h3>
+            <p>Our quarterly Doorways newsletter (online or hard copy) is loaded with stories about God's work among international students.</p>
+            <h3>33 Days of Prayer</h3>
+            <p>Prayer is the foundation of our ministry. We believe that prayer is the key to unlocking the doors of international students' hearts. We invite you to join us in praying for the international students in your city.</p>
           </div>
         </div>
       </section>
