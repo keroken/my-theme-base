@@ -32,7 +32,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
                   <p>Click on a city marker to view more information.</p>
                 </div>
               </div>
-              <p class="text-content-supporter">If your city isn’t listed, <a href="mailto:info@ismc.ca">contact us</a> to find an ISM near you</p>
+              <p class="message-text-supporter">If your city isn’t listed, <a href="mailto:info@ismc.ca">contact us</a> to find an ISM near you</p>
             </div>
           </div>
         </div>

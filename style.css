@@ -673,6 +673,10 @@ hr {
   line-height: 1.6;
   text-align: center;
   color: #333;
+  & a {
+    font-weight: 600;
+    color:rgb(58, 90, 222);
+  }
 }
 
 .stats-label-supporter {
@@ -702,6 +706,12 @@ hr {
   font-weight: 500;
   line-height: 1.2;
   margin-top: 60px;
+}
+
+@media screen and (max-width: 800px) {
+  .page-content-supporter {
+    width: 100%;
+  }
 }
 
 .page-content-supporter h4 {
@@ -1797,6 +1807,9 @@ dialog {
 }
 
 .city-info-volunteer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background:#1c57a1;
 }
 
@@ -1810,6 +1823,7 @@ dialog {
 }
 
 .city-info p {
+  text-align: left;
   color: #ddd;
 }
 
@@ -1833,6 +1847,10 @@ dialog {
 .city-details .contact-info {
   margin: 1rem 0;
   color: #ddd;
+  word-break: break-word;
+  & a {
+    color: #ddd;
+  }
 }
 
 .city-details .social-links {
@@ -1842,13 +1860,8 @@ dialog {
 }
 
 .city-details .social-links a {
-  color: #fcba03;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.city-details .social-links a:hover {
-  color: #ffd45c;
+  text-decoration: underline;
+  color: #ddd;
 }
 
 /* Ensure Leaflet map tiles are visible */
