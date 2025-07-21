@@ -779,10 +779,11 @@ hr {
 }
 
 .action-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
   margin-top: 30px;
+  gap: 30px;
 }
 
 .action-item {
@@ -792,12 +793,21 @@ hr {
   justify-content: center;
   row-gap: 20px;
   padding: 30px;
+  background: #1a437d;
+  color: #fff;
   & h4 {
-    color: #333;
+    color: #fff;
     font-family: "Bebas Neue", sans-serif;
     font-size: 28px;
     font-weight: 500;
     line-height: 1.2;
+  }
+  & a {
+    color: #ffd45c;
+    font-weight: 500;
+    &:hover {
+      color: #fcba03;
+    }
   }
 }
 
@@ -828,7 +838,6 @@ hr {
   align-items: center;
   justify-content: center;
   row-gap: 20px;
-  height: 300px;
   padding: 30px;
   background: #1a437d;
   color: #fff;
