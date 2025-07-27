@@ -298,6 +298,9 @@ hr {
 }
 
 @media screen and (max-width: 1040px) {
+  #site-footer {
+    padding: 60px 40px;
+  }
   .footer-inner {
     display: flex;
     flex-direction: column;
@@ -712,6 +715,9 @@ hr {
 @media screen and (max-width: 800px) {
   .page-content-supporter {
     width: 100%;
+    & p {
+      padding: 0 20px;
+    }
   }
 }
 
