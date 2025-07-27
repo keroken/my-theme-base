@@ -1021,6 +1021,15 @@ hr {
   font-weight: 600;
 }
 
+@media screen and (max-width: 800px) {
+  .prayer-content {
+    width: 100%;
+  }
+  .prayer-guide-frame {
+    padding: 20px;
+  }
+}
+
 /* ================================================================ 
   Volunteer Page
 =================================================================== */
