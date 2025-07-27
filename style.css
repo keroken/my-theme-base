@@ -1808,7 +1808,7 @@ dialog {
   gap: 2rem;
   padding: 2rem;
   height: 100%;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: auto;
@@ -1881,6 +1881,9 @@ dialog {
   word-break: break-word;
   & a {
     color: #ddd;
+    &:hover {
+      color: #fcba03;
+    }
   }
 }
 
@@ -1893,6 +1896,9 @@ dialog {
 .city-details .social-links a {
   text-decoration: underline;
   color: #ddd;
+  &:hover {
+    color: #fcba03;
+  }
 }
 
 /* Ensure Leaflet map tiles are visible */
@@ -1908,7 +1914,6 @@ dialog {
 @media screen and (max-width: 800px) {
   .find-your-city-container {
     flex-direction: column;
-    width: unset;
     padding: 1rem;
     gap: 0.5rem;
   }
