@@ -38,13 +38,13 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
               );
               foreach ($programs['programs'] as $program) {
                 echo '<li>';
-                echo '<img src="' .
-                  get_template_directory_uri() .
-                  '/images/' .
-                  $program['image'] .
-                  '" alt="' .
-                  $program['title'] .
-                  '">';
+                // echo '<img src="' .
+                //   get_template_directory_uri() .
+                //   '/images/' .
+                //   $program['image'] .
+                //   '" alt="' .
+                //   $program['title'] .
+                //   '">';
                 echo '<h4>' . $program['title'] . '</h4>';
                 echo '<p>' . $program['description'] . '</p>';
                 echo '</li>';
