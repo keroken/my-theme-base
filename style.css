@@ -168,7 +168,6 @@ hr {
   align-items: center;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 1040px) {
@@ -177,6 +176,7 @@ hr {
     flex-direction: column;
     background-color: #fff;
     height: auto;
+    box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
   }
   .primary-menu.show-menu {
     display: flex;
