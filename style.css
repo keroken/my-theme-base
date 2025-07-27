@@ -1016,6 +1016,13 @@ hr {
 
 .go-back-link {
   margin-top: 80px;
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.go-back-link-supporter {
+  margin-top: 80px;
   color: #666;
   font-size: 18px;
   font-weight: 600;
@@ -1801,6 +1808,7 @@ dialog {
   gap: 2rem;
   padding: 2rem;
   height: 100%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: auto;
@@ -1900,6 +1908,7 @@ dialog {
 @media screen and (max-width: 800px) {
   .find-your-city-container {
     flex-direction: column;
+    width: unset;
     padding: 1rem;
     gap: 0.5rem;
   }

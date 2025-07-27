@@ -50,7 +50,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
     <?php
       endwhile;
     endif; ?>
-    <span class="go-back-link"><a href="javascript:history.back()">Go Back</a></span>
+    <span class="go-back-link-supporter"><a href="javascript:history.back()">Go Back</a></span>
   </div>
 </div>
 
