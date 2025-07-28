@@ -888,6 +888,11 @@ hr {
 
 .donate-text {
   text-align: left;
+  & li {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 60px;
+  }
 }
 
 .donate-list {
@@ -907,6 +912,12 @@ hr {
 @media screen and (max-width: 1200px) {
   .donate-list {
     grid-template-columns: 1fr;
+  }
+  .donate-text {
+    & li {
+      margin: 30px 20px;
+      list-style: none;
+    }
   }
 }
 

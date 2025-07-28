@@ -19,17 +19,17 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
       <div class="content-wrapper">
         <div class="message-text-supporter page-content-supporter">
           <h3>SUPPORT the mission of reaching and empowering international students!</h3>
+          <p>International Student Ministries Canada—ISMC—is an interdenominational faith mission, incorporated in Canada, and supported by partners and friends who share our vision to empower international students to impact the world through Jesus Christ. Donations large and small fuel staff and special projects that reach international students across the nation so they can become Christ’s servants, ministering around the world!</p>
           <div class="donate-container">
-            <div class="donate-text">
-              <p>International Student Ministries Canada—ISMC—is an interdenominational faith mission, incorporated in Canada, and supported by partners and friends who share our vision to empower international students to impact the world through Jesus Christ. Donations large and small fuel staff and special projects that reach international students across the nation so they can become Christ’s servants, ministering around the world!</p>
-              <p>Online donations are processed through <a href="https://www.canadahelps.org/en/" target="_blank" rel="noopener noreferrer">Canada Helps</a>, and subjected to a 3.5–4% transaction processing fee. You will receive a tax receipt by email from Canada Helps. If you have trouble with the donation form above, please visit <a href="https://www.canadahelps.org/en/charities/ismc-international-student-ministries-canada/" target="blank" rel="noopener noreferrer">ISMC’s donation page on Canada Helps</a>.</p>
+            <ul class="donate-text">
+              <li>Online donations are processed through <a href="https://www.canadahelps.org/en/" target="_blank" rel="noopener noreferrer">Canada Helps</a>, and subjected to a 3.5–4% transaction processing fee. You will receive a tax receipt by email from Canada Helps. If you have trouble with the donation form above, please visit <a href="https://www.canadahelps.org/en/charities/ismc-international-student-ministries-canada/" target="blank" rel="noopener noreferrer">ISMC’s donation page on Canada Helps</a>.</li>
 
-              <p>Fundraising for staff salary goals includes salary needs, ministry expenses, and an 11% administration fee.</p>
+              <li>Fundraising for staff salary goals includes salary needs, ministry expenses, and an 11% administration fee.</li>
 
-              <p>Donations are receipted only for staff and projects approved by the governing board. Designated gifts are used for the purpose for which they are given; when that given need is met, excess funds are used where needed most.</p>
+              <li>Donations are receipted only for staff and projects approved by the governing board. Designated gifts are used for the purpose for which they are given; when that given need is met, excess funds are used where needed most.</li>
 
-              <p>Gifts of $10 or more are acknowledged with a Canadian receipt for income tax purposes. Charity Registration No: 12954-3302-RR0001</p>
-            </div>
+              <li>Gifts of $10 or more are acknowledged with a Canadian receipt for income tax purposes. Charity Registration No: 12954-3302-RR0001</li>
+            </ul>
             <div class="donate-column">
               <script id="ch_cdn_embed" src="https://www.canadahelps.org/services/wa/js/apps/donatenow/embed.min.js" type="text/javascript" data-page-id="36384" data-cfasync="false" data-formtype="1"></script>
             </div>
