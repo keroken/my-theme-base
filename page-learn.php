@@ -127,20 +127,4 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
   </div>
 </div>
 
-<dialog class="story-modal">
-  <div id="dialogInputArea">
-    <div class="dialog-header">
-        <p id="story-title">Story</p>
-        <button class="close-button">Close Story</button>
-    </div>
-    <div class="story-body">
-      <div class="story-image-container">
-        <img id="story-image" src="" alt="Story image" />
-      </div>
-      <div id="story-content"></div>
-    </div>
-    <button class="close-button-bottom">Close Story</button>
-  </div>
-</dialog>
-
 <?php get_footer(); ?>
