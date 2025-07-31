@@ -343,12 +343,6 @@ add_action('wp_head', function () {
   }
 });
 
-add_action('wp_head', function () {
-  if (is_page('learn')) {
-    front_page_custom_javascript();
-  }
-});
-
 function header_custom_javascript() {
   ?>
       <script type="text/javascript">
@@ -405,7 +399,9 @@ function story_page_custom_javascript() {
           const openDialog = (index) => {
             storyDialogs[index].showModal();
             storyDialogs[index].classList.add('show-modal');
-            overlay.style.display = 'block';
+            if (overlay) {
+              overlay.style.display = 'block';
+            }
             document.documentElement.style.overflow = "hidden";
           };
 
@@ -423,31 +419,33 @@ function story_page_custom_javascript() {
 
           closeButtons.forEach((closeButton, index) => {
             closeButton.addEventListener('click', () => {
-              storyDialogs.forEach((storyDialog) => {
-                storyDialogs[index].close();
+              storyDialogs[index].close();
+              if (overlay) {
                 overlay.style.display = "none";
-                storyDialogs[index].classList.remove('show-modal');
-                document.documentElement.removeAttribute("style");
-              });
+              }
+              storyDialogs[index].classList.remove('show-modal');
+              document.documentElement.removeAttribute("style");
             });
           });
 
           closeButtonBottoms.forEach((closeButtonBottom, index) => {
             closeButtonBottom.addEventListener('click', () => {
-              storyDialogs.forEach((storyDialog) => {
-                storyDialogs[index].close();
+              storyDialogs[index].close();
+              if (overlay) {
                 overlay.style.display = "none";
-                storyDialogs[index].classList.remove('show-modal');
-                document.documentElement.removeAttribute("style");
-              });
+              }
+              storyDialogs[index].classList.remove('show-modal');
+              document.documentElement.removeAttribute("style");
             });
           });
 
           storyDialogs.forEach((storyDialog, index) => {
             storyDialog.addEventListener('click', (event) => {
-              if (event.target.closest('#dialogInputArea') === null) {
+              if (event.target.closest('[id^="dialogInputArea"]') === null) {
                 storyDialogs[index].close();
-                overlay.style.display = "none";
+                if (overlay) {
+                  overlay.style.display = "none";
+                }
                 storyDialogs[index].classList.remove('show-modal');
                 document.documentElement.removeAttribute("style");
               }
@@ -459,17 +457,26 @@ function story_page_custom_javascript() {
   <?php
 }
 add_action('wp_head', function () {
-  if (is_home()) {
+  if (is_page('learn')) {
     story_page_custom_javascript();
   }
 });
 
 function find_your_city_map_functionality() {
   // Enqueue Leaflet CSS and JS
-  wp_enqueue_style('leaflet-css', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css', [], '1.9.4');
-  wp_enqueue_script('leaflet-js', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js', [], '1.9.4', true);
-  
-  // Add the map JavaScript
+  wp_enqueue_style(
+    'leaflet-css',
+    'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
+    [],
+    '1.9.4',
+  );
+  wp_enqueue_script(
+    'leaflet-js',
+    'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+    [],
+    '1.9.4',
+    true,
+  );// Add the map JavaScript
   ?>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

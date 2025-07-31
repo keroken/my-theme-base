@@ -8,6 +8,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
 ?>
 
 <div class="supporter-bg">
+  <div class="overlay"></div>
   <div class="page-hero-container">
     <div class="hero-overlay"></div>
     <div class="page-hero-message">
@@ -56,14 +57,14 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
                     </span>
                   </div>
                   <dialog class="story-modal">
-                    <div id="dialogInputArea">
+                    <div id="dialogInputArea-<?php echo get_the_ID(); ?>">
                       <div class="dialog-header">
-                          <p id="story-title"><?php the_title(); ?></p>
+                          <p id="story-title-<?php echo get_the_ID(); ?>"><?php the_title(); ?></p>
                           <button class="close-button">Close Story</button>
                       </div>
                       <div class="story-body">
                         <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
-                        <p id="story-content"><?php the_content(); ?></p>
+                        <p id="story-content-<?php echo get_the_ID(); ?>"><?php the_content(); ?></p>
                       </div>
                       <button class="close-button-bottom">Close Story</button>
                     </div>
@@ -86,14 +87,14 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
                     </figure>
                   <?php endif; ?>
                   <dialog class="story-modal">
-                    <div id="dialogInputArea">
+                    <div id="dialogInputArea-<?php echo get_the_ID(); ?>">
                       <div class="dialog-header">
-                          <p id="story-title"><?php the_title(); ?></p>
+                          <p id="story-title-<?php echo get_the_ID(); ?>"><?php the_title(); ?></p>
                           <button class="close-button">Close Story</button>
                       </div>
                       <div class="story-body">
                         <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
-                        <p id="story-content"><?php the_content(); ?></p>
+                        <p id="story-content-<?php echo get_the_ID(); ?>"><?php the_content(); ?></p>
                       </div>
                       <button class="close-button-bottom">Close Story</button>
                     </div>
