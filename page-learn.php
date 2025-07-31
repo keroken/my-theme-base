@@ -63,7 +63,6 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
                           <button class="close-button">Close Story</button>
                       </div>
                       <div class="story-body">
-                        <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
                         <p id="story-content-<?php echo get_the_ID(); ?>"><?php the_content(); ?></p>
                       </div>
                       <button class="close-button-bottom">Close Story</button>
@@ -93,7 +92,6 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
                           <button class="close-button">Close Story</button>
                       </div>
                       <div class="story-body">
-                        <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
                         <p id="story-content-<?php echo get_the_ID(); ?>"><?php the_content(); ?></p>
                       </div>
                       <button class="close-button-bottom">Close Story</button>
