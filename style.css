@@ -574,7 +574,7 @@ hr {
   font-weight: 400;
   line-height: 1.6;
   text-align: justify;
-  color: #ddd;
+  color: #333;
 }
 
 .post-link-container {
@@ -589,6 +589,7 @@ hr {
   font-weight: 600;
   text-align: right;
   text-decoration: underline;
+  color: #333;
   &:hover {
     color: #fcba03;
   }
@@ -597,6 +598,29 @@ hr {
 .story-modal img.attachment-post-thumbnail {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .post-frame {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .post-content {
+    align-items: center;
+  }
+
+  .post-text {
+    text-align: center;
+  }
+  .post-link-container {
+    justify-content: center;
+  }
+  .post-thumbnail {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 /* ================================================================ 
