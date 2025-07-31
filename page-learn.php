@@ -22,25 +22,89 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
             <p>We empower individuals and churches to engage and minister to international students in their neighborhood through professional development, networking, and resourcing.</p>
 
             <h3>Latest Stories</h3>
-            <div class="student-story-row">
-              <div class="student-story-item student-story-image-05">
-                <button class="story-circle-button" id="story-button-05">
-                  <div class="student-story-overlay"></div>
-                  <div class="story-label">Kenji</div>
-                </button>
-              </div>
-              <div class="student-story-item student-story-image-02">
-                <button class="story-circle-button" id="story-button-02">
-                  <div class="student-story-overlay"></div>
-                  <div class="story-label">Vinu</div>
-                </button>
-              </div>
-              <div class="student-story-item student-story-image-04">
-                <button class="story-circle-button" id="story-button-04">
-                  <div class="student-story-overlay"></div>
-                  <div class="story-label">Mindy</div>
-                </button>
-              </div>
+            <div class="post-wrapper">
+              <?php
+              // Create custom query for blog posts
+              $args = [
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 6, // Display 6 latest posts
+                'orderby' => 'date',
+                'order' => 'DESC',
+              ];
+              $posts_query = new WP_Query($args);
+
+              if ($posts_query->have_posts()):
+                while ($posts_query->have_posts()):
+                  $posts_query->the_post(); ?>
+                <article class ="post-frame" <?php post_class(); ?>>
+                <?php if ($posts_query->current_post % 2 == 0): ?>
+                  <?php if (has_post_thumbnail()): ?>
+                    <figure class="post-thumbnail">
+                      <button class="story-circle-button story-button">
+                        <?php the_post_thumbnail(); ?>
+                      </button>
+                    </figure>
+                  <?php endif; ?>
+                  <div class="post-content">
+                    <?php the_title('<h4 class="post-title">', '</h4>'); ?>
+                    <span class="post-text">
+                      <?php the_excerpt(); ?>
+                    </span>
+                    <span class="post-link-container">
+                      <button class="post-link read-more-button">Read More</button>
+                    </span>
+                  </div>
+                  <dialog class="story-modal">
+                    <div id="dialogInputArea">
+                      <div class="dialog-header">
+                          <p id="story-title"><?php the_title(); ?></p>
+                          <button class="close-button">Close Story</button>
+                      </div>
+                      <div class="story-body">
+                        <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
+                        <p id="story-content"><?php the_content(); ?></p>
+                      </div>
+                      <button class="close-button-bottom">Close Story</button>
+                    </div>
+                  </dialog>
+                  <?php else: ?>
+                  <div class="post-content">
+                    <?php the_title('<h4 class="post-title">', '</h4>'); ?>
+                    <span class="post-text">
+                      <?php the_excerpt(); ?>
+                    </span>
+                    <span class="post-link-container">
+                      <button class="post-link read-more-button">Read More</button>
+                    </span>
+                  </div>
+                  <?php if (has_post_thumbnail()): ?>
+                    <figure class="post-thumbnail">
+                      <button class="story-circle-button story-button">
+                        <?php the_post_thumbnail(); ?>
+                      </button>
+                    </figure>
+                  <?php endif; ?>
+                  <dialog class="story-modal">
+                    <div id="dialogInputArea">
+                      <div class="dialog-header">
+                          <p id="story-title"><?php the_title(); ?></p>
+                          <button class="close-button">Close Story</button>
+                      </div>
+                      <div class="story-body">
+                        <p style="width:50%; float:left; margin-right:12px"><?php the_post_thumbnail(); ?></p>
+                        <p id="story-content"><?php the_content(); ?></p>
+                      </div>
+                      <button class="close-button-bottom">Close Story</button>
+                    </div>
+                  </dialog>
+                  <?php endif; ?>
+                </article>
+              <?php
+                endwhile;
+                wp_reset_postdata(); // Reset global post data
+              endif;
+              ?>
             </div>
 
             <ul class="get-involved-list">
