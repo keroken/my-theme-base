@@ -679,7 +679,7 @@ hr {
   color: #333;
   & a {
     font-weight: 600;
-    color:rgb(58, 90, 222);
+    color: rgb(58, 90, 222);
   }
 }
 
@@ -1869,7 +1869,7 @@ dialog {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background:#1c57a1;
+  background: #1c57a1;
 }
 
 .city-info h2 {
