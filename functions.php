@@ -29,7 +29,11 @@ function mytheme_seo_meta_tags() {
   $image = get_template_directory_uri() . '/images/ISMC_primary_logo.png';
 
   // Page/post specific meta
-  if (is_single() || is_page()) {
+  if (is_front_page()) {
+    $title = get_bloginfo('name') . ' - International Student Ministry Canada';
+    $description =
+      'International Student Ministry Canada empowers international students to impact the world through Jesus Christ.';
+  } elseif (is_single() || is_page()) {
     if (has_excerpt()) {
       $description = get_the_excerpt();
     } else {
@@ -59,6 +63,11 @@ function mytheme_seo_meta_tags() {
   $description = str_replace(["\n", "\r", "\t"], ' ', $description);
   $description = preg_replace('/\s+/', ' ', $description);
   $description = trim($description);
+  
+  // Ensure description isn't too long (ideal length: 150-160 characters)
+  if (strlen($description) > 160) {
+    $description = substr($description, 0, 157) . '...';
+  }
 
   // Output meta tags
   echo "\n<!-- SEO Meta Tags -->\n";
