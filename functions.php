@@ -152,10 +152,6 @@ function mytheme_preload_critical_resources() {
     // Preload hero image in WebP format with JPG fallback
     echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/hero-image.webp" type="image/webp" fetchpriority="high">' . "\n";
     echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/hero-image.jpg" type="image/jpeg" fetchpriority="high">' . "\n";
-    
-    // Preload critical fonts
-    echo '<link rel="preload" as="font" href="https://fonts.gstatic.com/s/bebasneue/v10/JTUSjIg69CK48gW7PXooxW5ryCg.woff2" type="font/woff2" crossorigin>' . "\n";
-    echo '<link rel="preload" as="font" href="https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.woff2" type="font/woff2" crossorigin>' . "\n";
   }
 }
 add_action('wp_head', 'mytheme_preload_critical_resources', 1);
