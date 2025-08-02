@@ -144,6 +144,48 @@ function mytheme_enqueue() {
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue');
 
+// Preload critical resources for LCP optimization
+function mytheme_preload_critical_resources() {
+  if (is_front_page()) {
+    $theme_uri = get_template_directory_uri();
+    
+    // Preload hero image in WebP format with JPG fallback
+    echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/hero-image.webp" type="image/webp" fetchpriority="high">' . "\n";
+    echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/hero-image.jpg" type="image/jpeg" fetchpriority="high">' . "\n";
+    
+    // Preload critical fonts
+    echo '<link rel="preload" as="font" href="https://fonts.gstatic.com/s/bebasneue/v10/JTUSjIg69CK48gW7PXooxW5ryCg.woff2" type="font/woff2" crossorigin>' . "\n";
+    echo '<link rel="preload" as="font" href="https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.woff2" type="font/woff2" crossorigin>' . "\n";
+  }
+}
+add_action('wp_head', 'mytheme_preload_critical_resources', 1);
+
+// Add WebP detection script for better image optimization
+function mytheme_webp_detection() {
+  ?>
+  <script>
+    (function() {
+      function supportsWebP(callback) {
+        var webP = new Image();
+        webP.onload = webP.onerror = function () {
+          callback(webP.height == 2);
+        };
+        webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+      }
+      
+      supportsWebP(function(supported) {
+        if (supported) {
+          document.documentElement.classList.add('webp');
+        } else {
+          document.documentElement.classList.add('no-webp');
+        }
+      });
+    })();
+  </script>
+  <?php
+}
+add_action('wp_head', 'mytheme_webp_detection', 0);
+
 function front_page_custom_javascript() {
   ?>
       <script type="text/javascript">

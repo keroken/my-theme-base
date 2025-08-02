@@ -1268,6 +1268,11 @@ hr {
   justify-content: center;
 }
 
+/* WebP support detection */
+.webp .hero-area {
+  background-image: url("images/hero-image.webp");
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
