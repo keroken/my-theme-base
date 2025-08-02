@@ -151,6 +151,10 @@ function mytheme_preload_critical_resources() {
     
     // Preload hero image in WebP format (CSS handles JPG fallback for older browsers)
     echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/hero-image.webp" type="image/webp" fetchpriority="high">' . "\n";
+    
+    // Preload story images that may be visible above the fold
+    echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/Hatsumi_01.webp" type="image/webp">' . "\n";
+    echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/Vinu_01.webp" type="image/webp">' . "\n";
   }
 }
 add_action('wp_head', 'mytheme_preload_critical_resources', 1);

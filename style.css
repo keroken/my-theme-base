@@ -401,6 +401,11 @@ hr {
   background-repeat: no-repeat;
 }
 
+/* WebP support for page hero */
+.webp .page-hero-container {
+  background-image: url("images/hero-image-short.webp");
+}
+
 .page-hero-message h1 {
   position: relative;
   font-size: 48px;
@@ -1271,6 +1276,27 @@ hr {
 /* WebP support detection */
 .webp .hero-area {
   background-image: url("images/hero-image.webp");
+}
+
+/* WebP support for story images */
+.webp .circle-02 {
+  background-image: url("./images/Hatsumi_01.webp");
+}
+
+.webp .circle-05 {
+  background-image: url("./images/Vinu_01.webp");
+}
+
+.webp .circle-06 {
+  background-image: url("./images/Yan_01.webp");
+}
+
+.webp .circle-07 {
+  background-image: url("./images/Mindy_01.webp");
+}
+
+.webp .circle-08 {
+  background-image: url("./images/Kenji_01.webp");
 }
 
 .hero-overlay {
