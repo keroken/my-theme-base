@@ -149,9 +149,8 @@ function mytheme_preload_critical_resources() {
   if (is_front_page()) {
     $theme_uri = get_template_directory_uri();
     
-    // Preload hero image in WebP format with JPG fallback
+    // Preload hero image in WebP format (CSS handles JPG fallback for older browsers)
     echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/hero-image.webp" type="image/webp" fetchpriority="high">' . "\n";
-    echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/hero-image.jpg" type="image/jpeg" fetchpriority="high">' . "\n";
   }
 }
 add_action('wp_head', 'mytheme_preload_critical_resources', 1);
