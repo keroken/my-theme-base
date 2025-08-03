@@ -42,7 +42,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
                 <?php if ($posts_query->current_post % 2 == 0): ?>
                   <?php if (has_post_thumbnail()): ?>
                     <figure class="post-thumbnail">
-                      <button class="story-circle-button story-button">
+                      <button class="story-circle-button story-button" aria-label="View <?php echo esc_attr(get_the_title()); ?> story">
                         <?php the_post_thumbnail(); ?>
                       </button>
                     </figure>
@@ -80,7 +80,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
                   </div>
                   <?php if (has_post_thumbnail()): ?>
                     <figure class="post-thumbnail">
-                      <button class="story-circle-button story-button">
+                      <button class="story-circle-button story-button" aria-label="View <?php echo esc_attr(get_the_title()); ?> story">
                         <?php the_post_thumbnail(); ?>
                       </button>
                     </figure>

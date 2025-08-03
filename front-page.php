@@ -73,31 +73,31 @@ diaspora communities like international students.</p>
           <div class="circle circle-11 fingerprint fade"></div>
           <div class="circle circle-10 logo-circle fade"></div>
           <div class="story-circle circle-02">
-            <button class="story-circle-button" id="story-button-01">
+            <button class="story-circle-button" id="story-button-01" aria-label="View Hatsumi's story">
               <div class="story-overlay"></div>
               <div class="story-label">Hatsumi</div>
             </button>
           </div>
           <div class="story-circle circle-05">
-            <button class="story-circle-button" id="story-button-02">
+            <button class="story-circle-button" id="story-button-02" aria-label="View Vinu's story">
               <div class="story-overlay"></div>
               <div class="story-label">Vinu</div>
             </button>
           </div>
           <div class="story-circle circle-06">
-            <button class="story-circle-button" id="story-button-03">
+            <button class="story-circle-button" id="story-button-03" aria-label="View Yan's story">
               <div class="story-overlay"></div>
               <div class="story-label">Yan</div>
             </button>
           </div>
           <div class="story-circle circle-07">
-            <button class="story-circle-button" id="story-button-04">
+            <button class="story-circle-button" id="story-button-04" aria-label="View Mindy's story">
               <div class="story-overlay"></div>
               <div class="story-label">Mindy</div>
             </button>
           </div>
           <div class="story-circle circle-08">
-            <button class="story-circle-button" id="story-button-05">
+            <button class="story-circle-button" id="story-button-05" aria-label="View Kenji's story">
               <div class="story-overlay"></div>
               <div class="story-label">Kenji</div>
             </button>

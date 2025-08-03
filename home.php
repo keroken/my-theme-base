@@ -27,7 +27,7 @@
         <?php if ($wp_query->current_post % 2 == 0): ?>
           <?php if (has_post_thumbnail()): ?>
             <figure class="post-thumbnail">
-              <button class="story-circle-button story-button">
+              <button class="story-circle-button story-button" aria-label="View <?php echo esc_attr(get_the_title()); ?> story">
                 <?php the_post_thumbnail(); ?>
               </button>
             </figure>
@@ -66,7 +66,7 @@
           </div>
           <?php if (has_post_thumbnail()): ?>
             <figure class="post-thumbnail">
-              <button class="story-circle-button story-button">
+              <button class="story-circle-button story-button" aria-label="View <?php echo esc_attr(get_the_title()); ?> story">
                 <?php the_post_thumbnail(); ?>
               </button>
             </figure>
