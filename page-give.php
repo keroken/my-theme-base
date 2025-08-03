@@ -18,7 +18,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
     <section <?php post_class(); ?>>
       <div class="content-wrapper">
         <div class="message-text-supporter page-content-supporter">
-          <h3>SUPPORT the mission of reaching and empowering international students!</h3>
+          <h2>SUPPORT the mission of reaching and empowering international students!</h2>
           <p>International Student Ministries Canada—ISMC—is an interdenominational faith mission, incorporated in Canada, and supported by partners and friends who share our vision to empower international students to impact the world through Jesus Christ. Donations large and small fuel staff and special projects that reach international students across the nation so they can become Christ’s servants, ministering around the world!</p>
           <div class="donate-container">
             <ul class="donate-text">
@@ -34,7 +34,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
               <script id="ch_cdn_embed" src="https://www.canadahelps.org/services/wa/js/apps/donatenow/embed.min.js" type="text/javascript" data-page-id="36384" data-cfasync="false" data-formtype="1"></script>
             </div>
           </div>
-          <h3>Other ways to give</h3>
+          <h2>Other ways to give</h2>
           <ul class="donate-list">
             <li class="donate-item">
               <h4>E-Transfers</h4>
@@ -63,7 +63,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
               <p>ISMC has partnered with <a href="https://www.linkcharity.ca/" target="_blank" rel="noopener">Link Charity</a> who can help you in the area of gift planning <span style="font-weight: 400;">through annuities, will bequests, in kind stock donations, or donor advised funds from your own family foundation.</span></p>
             </li>
           </ul>
-          <h3>For more information, please contact:</h3>
+          <h2>For more information, please contact:</h2>
           <p>Susan Esau<br>Senior Accountant<br>403-443-5676<br><a href="mailto:finance@ismc.ca">finance@ismc.ca</a></p>
           <img src="<?php echo get_template_directory_uri(); ?>/images/cccc-web.png" alt="CCCC Web">
           <p>International Student Ministries Canada—ISMC is a member of the Canadian Centre for Christian Charities—CCCC.</p>

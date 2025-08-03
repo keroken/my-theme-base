@@ -56,7 +56,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
             );
             ?>
             <div class="staff-details">
-              <h3 class="staff-name"><?php the_title(); ?></h3>
+              <h2 class="staff-name"><?php the_title(); ?></h2>
               <span class="staff-title"><?php echo esc_html(
                 $staff_title,
               ); ?></span>

@@ -22,10 +22,10 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
       <section <?php post_class(); ?>>
         <div class="content-wrapper">
           <div class="message-text-supporter page-content-supporter prayer-content">
-            <h3>Prayer Guide</h3>
+            <h2>Prayer Guide</h2>
             <p>Become a part of our ministry team by praying for God’s work among international students</p>
             <div class="prayer-guide-frame">
-              <h4>Join Us In Prayer</h4>
+              <h3>Join Us In Prayer</h3>
               <p>Develop the habit of praying for international students.</p>
               <a href="https://app.textinchurch.com/connect-cards/cKY7PqTt0w3eVoW9dSWu" target="_blank" rel="noopener noreferrer">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/prayer-guide.jpg" alt="Prayer Guide">
@@ -38,7 +38,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
               </ol>
               <p>Thank you so much for your prayers! We trust God will use them to reach international students with His love and truth.</p>
             </div>
-            <h3>Subscribe to DoorWays</h3>
+            <h2>Subscribe to DoorWays</h2>
             <p>Our quarterly Doorways newsletter (online or hard copy) is loaded with stories about God's work among international students.</p>
             <p><em><strong><a href="https://ismc.ca/doorways/" target="_blank" rel="noopener noreferrer">Subscribe to DoorWays</a></strong></em></p>
             <div class="prayer-guide-frame">

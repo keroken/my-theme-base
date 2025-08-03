@@ -12,7 +12,7 @@ get_header(); ?>
         <div id="canada-map" style="height: 600px; width: 100%;"></div>
       </div>
       <div class="city-info" id="city-info">
-        <h2>Select a City</h2>
+        <h1>Select a City</h1>
         <p>Click on a city marker to view more information.</p>
       </div>
     </div>

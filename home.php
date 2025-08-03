@@ -14,7 +14,7 @@
   </div>
   <main class="post-container">
     <div class="page-content">
-      <h3>UNITED IN GOD'S GREAT STORIES</h3>
+      <h2>UNITED IN GOD'S GREAT STORIES</h2>
       <div class="message-text about-content">
         <p>Sharing from students, volunteers and staff</p>
       </div>

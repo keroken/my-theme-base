@@ -18,9 +18,9 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
     <section <?php post_class(); ?>>
       <div class="content-wrapper">
         <div class="message-text-supporter page-content-supporter">
-          <h3>Vision</h3>
+          <h2>Vision</h2>
           <p>We seek to love international students unconditionally, partner with local churches in leading students to discover Jesus through the Word of God, and prepare them to serve God wherever He leads them.</p>
-          <h3>Numbers</h3>
+          <h2>Numbers</h2>
           <div class="stats-row">
             <div class="stats-item">
               <div class="stats-number-supporter">600+</div>
@@ -35,7 +35,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
               <div class="stats-label-supporter">Campuses in Canada</div>
             </div>
           </div>
-          <h3>Student Stories</h3>
+          <h2>Student Stories</h2>
           <div class="student-story-row">
             <div class="student-story-item student-story-image-05">
               <button class="story-circle-button" id="story-button-05">
@@ -56,7 +56,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
               </button>
             </div>
           </div>
-          <h3>Get Involved</h3>
+          <h2>Get Involved</h2>
           <div class="action-list">
             <div class="action-item">
               <h4>Learn</h4>

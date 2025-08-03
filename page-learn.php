@@ -19,7 +19,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
       <section <?php post_class(); ?>>
         <div class="content-wrapper">
           <div class="message-text-supporter page-content-supporter">
-            <h3>Learn, connect, and access resources to reach internationals in your area!</h3>
+            <h2>Learn, connect, and access resources to reach internationals in your area!</h2>
             <p>We empower individuals and churches to engage and minister to international students in their neighborhood through professional development, networking, and resourcing.</p>
 
             <h3>Latest Stories</h3>

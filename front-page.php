@@ -26,8 +26,8 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
   <div class="content-area">
     <section class="section section-stats fade">
       <div class="section-title">
-        <h4>Empowering international students to impact the world
-  through Jesus Christ</h4>
+        <h3>Empowering international students to impact the world
+  through Jesus Christ</h3>
       </div>
       <div class="stats-row fade">
         <div class="stats-item">
@@ -50,7 +50,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
     </section>
     <section class="section section-stories fade">
       <div class="section-title">
-        <h4>A local community with global impact</h4>
+        <h3>A local community with global impact</h3>
       </div>
       <div class="story-preface">
         <p class="message-text">What God started 40 years ago has touched so many lives. Over those
