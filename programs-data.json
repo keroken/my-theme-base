@@ -2,33 +2,33 @@
   "programs": [
     {
       "title": "Welcome Programs",
-      "description": "Airport PIckups, Welcome Dinners, City Orientation, Campus Tours, Welcome Gift Bags.",
-      "image": "welcome_programs.jpg"
+      "description": "Airport Pickups, Welcome Dinners, City Orientation, Campus Tours, Welcome Gift Bags.",
+      "image": "welcome_programs.webp"
     },
     {
       "title": "Practical Help",
       "description": "Moving Help, Furniture programs, Tax Clinics, Career Mentorship.",
-      "image": "practical_help.jpg"
+      "image": "practical_help.webp"
     },
     {
       "title": "ESL Programs",
       "description": "English as a Second Language classes, English Conversation Partners, English Cafes.",
-      "image": "esl_programs.jpg"
+      "image": "esl_programs.webp"
     },
     {
       "title": "Friendship & Hospitality",
       "description": "Friends for Dinner Holiday Meals, Group Outings and Trips, Weekly or Monthly Dinners, FOCUS club (Friends of Overseas College & University Students).",
-      "image": "friendship_hospitality.jpg"
+      "image": "friendship_&_hospitality.webp"
     },
     {
       "title": "Spiritual Exploration",
       "description": "Alpha Courses, Interactive Bible Studies & discussion, Connection to church communities.",
-      "image": "spiritual_exploration.jpg"
+      "image": "spiritual_exploration.webp"
     },
     {
       "title": "Graduating Students",
       "description": "Help connecting to other communities in a new city, helping prepare students to move home, Connecting students with churches to welcome returning students.",
-      "image": "graduating_students.jpg"
+      "image": "graduating_students.webp"
     }
   ]
 }
