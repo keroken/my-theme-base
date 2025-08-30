@@ -465,6 +465,9 @@ hr {
 }
 
 @media screen and (max-width: 800px) {
+  .page-content {
+    width: 90%;
+  }
   .page-content ol {
     width: 100%;
   }
@@ -1950,9 +1953,7 @@ dialog {
 .find-your-city-container {
   display: flex;
   gap: 2rem;
-  padding: 2rem;
   height: 100%;
-  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: auto;
@@ -1985,15 +1986,6 @@ dialog {
   flex-direction: column;
   align-items: flex-start;
   background: #1c57a1;
-}
-
-.city-info h1 {
-  margin-top: 0;
-  color: #fcba03;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 1.2;
 }
 
 .city-info h2 {
@@ -2076,7 +2068,6 @@ dialog {
 @media screen and (max-width: 800px) {
   .find-your-city-container {
     flex-direction: column;
-    padding: 1rem;
     gap: 0.5rem;
   }
 
