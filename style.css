@@ -1413,7 +1413,7 @@ hr {
 }
 
 .section-stats {
-  height: 500px;
+  height: 400px;
 }
 
 .section-title {
@@ -1472,9 +1472,123 @@ hr {
 }
 
 .section-stories {
-  height: 1800px;
   padding-bottom: 200px;
-  margin-bottom: 200px;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 80px;
+  width: 80%;
+  margin: 160px auto 0;
+}
+
+.quote-item-container {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 40px;
+}
+
+.quote-marker {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  color: #ffe45c;
+  flex-shrink: 0;
+}
+
+.quote-item-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+  width: 60%;
+}
+
+.quote-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-end;
+  width: 60%;
+}
+
+.quote-line {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 10px;
+}
+
+.quote-text {
+  font-size: 26px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #ffe45c;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #ddd;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .quote-container {
+    row-gap: 40px;
+    margin: 80px auto 0;
+  }
+  .quote-item-container {
+    flex-direction: column;
+  }
+  .quote-item-left {
+    width: 100%;
+  }
+  .quote-item-right {
+    width: 100%;
+  }
+  .quote-text {
+    font-size: 20px;
+  }
+  .circle-image {
+    align-self: center;
+  }
+}
+
+.circle-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-01 {
+  background-image: url(./images/conversation.jpg);
+}
+
+.image-02 {
+  background-image: url(./images/picnic.jpg);
+}
+
+.image-03 {
+  background-image: url(./images/sports.jpg);
+}
+
+.image-04 {
+  background-image: url(./images/hike.jpg);
+}
+
+.image-05 {
+  background-image: url(./images/sunset.jpg);
 }
 
 .story-container {
