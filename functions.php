@@ -63,7 +63,7 @@ function mytheme_seo_meta_tags() {
   $description = str_replace(["\n", "\r", "\t"], ' ', $description);
   $description = preg_replace('/\s+/', ' ', $description);
   $description = trim($description);
-  
+
   // Ensure description isn't too long (ideal length: 150-160 characters)
   if (strlen($description) > 160) {
     $description = substr($description, 0, 157) . '...';
@@ -148,13 +148,16 @@ add_action('wp_enqueue_scripts', 'mytheme_enqueue');
 function mytheme_preload_critical_resources() {
   if (is_front_page()) {
     $theme_uri = get_template_directory_uri();
-    
+
     // Preload hero image in WebP format (CSS handles JPG fallback for older browsers)
-    echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/hero-image.webp" type="image/webp" fetchpriority="high">' . "\n";
-    
-    // Preload story images that may be visible above the fold
-    echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/Hatsumi_01.webp" type="image/webp">' . "\n";
-    echo '<link rel="preload" as="image" href="' . $theme_uri . '/images/Vinu_01.webp" type="image/webp">' . "\n";
+    // This is the main hero image that appears above the fold
+    echo '<link rel="preload" as="image" href="' .
+      $theme_uri .
+      '/images/hero-image.webp" type="image/webp" fetchpriority="high">' .
+      "\n";
+
+    // Note: Story images (Hatsumi, Vinu, etc.) are not preloaded as they appear below the fold
+    // and will load naturally when the user scrolls down
   }
 }
 add_action('wp_head', 'mytheme_preload_critical_resources', 1);
@@ -186,6 +189,60 @@ function mytheme_webp_detection() {
 add_action('wp_head', 'mytheme_webp_detection', 0);
 
 function front_page_custom_javascript() {
+  ?>
+      <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+          const overlay = document.querySelector('.overlay');
+
+          // Add fade in effect
+          const elementsArray = document.querySelectorAll(".fade");
+          for (let i = 0; i < elementsArray.length; i++) {
+              elementsArray[i].classList.add("fadeIn");
+          }
+      });
+
+      class ParallaxEffectBackground {
+          constructor() {
+              this.devided = 2;
+              this.target = '.move-target';
+              this.setBackgroundPosition();
+          }
+
+          getScrollTop() {
+              return Math.max(
+              window.pageYOffset,
+              document.documentElement.scrollTop,
+              document.body.scrollTop,
+              window.scrollY
+              );
+          }
+
+          setBackgroundPosition() {
+              document.addEventListener('scroll', e => {
+              const scrollTop = this.getScrollTop();
+              const position = scrollTop / this.devided - 60;
+              if (position) {
+                  document.querySelectorAll(this.target).forEach(element => {
+                  element.style.backgroundPosition = 'center top +' + position + 'px';
+                  });
+              }
+              });
+          }
+      
+      }
+      document.addEventListener('DOMContentLoaded', event => {
+          new ParallaxEffectBackground();
+      });
+      </script>
+  <?php
+}
+add_action('wp_head', function () {
+  if (is_front_page()) {
+    front_page_custom_javascript();
+  }
+});
+
+function find_out_page_custom_javascript() {
   ?>
       <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', () => {
@@ -338,58 +395,13 @@ function front_page_custom_javascript() {
                   closeModal();
               }
           });
-
-          // Add fade in effect
-          const elementsArray = document.querySelectorAll(".fade");
-          for (let i = 0; i < elementsArray.length; i++) {
-              elementsArray[i].classList.add("fadeIn");
-          }
-      });
-
-      class ParallaxEffectBackground {
-          constructor() {
-              this.devided = 2;
-              this.target = '.move-target';
-              this.setBackgroundPosition();
-          }
-
-          getScrollTop() {
-              return Math.max(
-              window.pageYOffset,
-              document.documentElement.scrollTop,
-              document.body.scrollTop,
-              window.scrollY
-              );
-          }
-
-          setBackgroundPosition() {
-              document.addEventListener('scroll', e => {
-              const scrollTop = this.getScrollTop();
-              const position = scrollTop / this.devided - 60;
-              if (position) {
-                  document.querySelectorAll(this.target).forEach(element => {
-                  element.style.backgroundPosition = 'center top +' + position + 'px';
-                  });
-              }
-              });
-          }
-      
-      }
-      document.addEventListener('DOMContentLoaded', event => {
-          new ParallaxEffectBackground();
       });
       </script>
   <?php
 }
 add_action('wp_head', function () {
-  if (is_front_page()) {
-    front_page_custom_javascript();
-  }
-});
-
-add_action('wp_head', function () {
   if (is_page('find-out')) {
-    front_page_custom_javascript();
+    find_out_page_custom_javascript();
   }
 });
 

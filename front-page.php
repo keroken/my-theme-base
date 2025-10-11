@@ -64,7 +64,7 @@ about Jesus in Jerusalem and took the gospel home with them.</p>
 forth has been part of God's strategy since the early church and continues today with 
 diaspora communities like international students.</p>
       </div>
-      <div class="quote-container">
+      <div class="quote-container fade">
         <div class="quote-item-container">
           <div class="quote-item-left">
             <div class="quote-line">
