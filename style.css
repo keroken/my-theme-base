@@ -838,22 +838,22 @@ hr {
   border-radius: 50%;
 }
 
-.student-story-image-05 {
-  background-image: url("./images/Kenji_01.jpg");
+.student-story-image-01 {
+  background-image: url("./images/Charlie.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .student-story-image-02 {
-  background-image: url("./images/Vinu_01.jpg");
+  background-image: url("./images/Alex.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.student-story-image-04 {
-  background-image: url("./images/Mindy_01.jpg");
+.student-story-image-03 {
+  background-image: url("./images/Naya.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1299,32 +1299,6 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* WebP support detection */
-.webp .hero-area {
-  background-image: url("images/hero-image.webp");
-}
-
-/* WebP support for story images */
-.webp .circle-02 {
-  background-image: url("./images/Hatsumi_01.webp");
-}
-
-.webp .circle-05 {
-  background-image: url("./images/Vinu_01.webp");
-}
-
-.webp .circle-06 {
-  background-image: url("./images/Yan_01.webp");
-}
-
-.webp .circle-07 {
-  background-image: url("./images/Mindy_01.webp");
-}
-
-.webp .circle-08 {
-  background-image: url("./images/Kenji_01.webp");
 }
 
 .hero-overlay {
@@ -1869,6 +1843,7 @@ dialog {
 
 #story-title {
   font-size: 24px;
+  font-weight: bold;
 }
 
 #story-content {
