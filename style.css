@@ -1481,7 +1481,7 @@ hr {
   align-items: flex-start;
   row-gap: 80px;
   width: 80%;
-  margin: 160px auto 0;
+  margin: 0 auto;
 }
 
 .quote-item-container {
@@ -1543,7 +1543,6 @@ hr {
 @media screen and (max-width: 800px) {
   .quote-container {
     row-gap: 40px;
-    margin: 80px auto 0;
   }
   .quote-item-container {
     flex-direction: column;
