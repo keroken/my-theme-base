@@ -191,11 +191,27 @@ function front_page_custom_javascript() {
       document.addEventListener('DOMContentLoaded', () => {
           const overlay = document.querySelector('.overlay');
 
-          // Add fade in effect
-          const elementsArray = document.querySelectorAll(".fade");
-          for (let i = 0; i < elementsArray.length; i++) {
-              elementsArray[i].classList.add("fadeIn");
-          }
+          // Add fade in effect when elements enter viewport
+          const fadeElements = document.querySelectorAll(".fade");
+
+          const observerOptions = {
+              root: null,
+              rootMargin: '0px',
+              threshold: 0.1 // Trigger when 10% of element is visible
+          };
+
+          const fadeObserver = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add("fadeIn");
+                      observer.unobserve(entry.target); // Stop observing once animated
+                  }
+              });
+          }, observerOptions);
+
+          fadeElements.forEach(element => {
+              fadeObserver.observe(element);
+          });
       });
 
       class ParallaxEffectBackground {

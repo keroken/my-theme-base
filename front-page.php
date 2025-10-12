@@ -48,11 +48,11 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
         </div>
       </div>
     </section>
-    <section class="section section-stories fade">
-      <div class="section-title">
+    <section class="section section-stories">
+      <div class="section-title fade">
         <h3>A local community with global impact</h3>
       </div>
-      <div class="story-preface">
+      <div class="story-preface fade">
         <p class="message-text">What God started 40 years ago has touched so many lives. Over those
 decades, ISMC has impacted the eternity of countless students, who
 have gone on to impact their circles of influence in Canada and around
@@ -65,7 +65,7 @@ forth has been part of God's strategy since the early church and continues today
 diaspora communities like international students.</p>
       </div>
       <div class="quote-container fade">
-        <div class="quote-item-container">
+        <div class="quote-item-container fade">
           <div class="quote-item-left">
             <div class="quote-line">
               <span class="quote-marker">
@@ -81,7 +81,7 @@ diaspora communities like international students.</p>
           </div>
           <div class="circle-image image-01"></div>
         </div>
-        <div class="quote-item-container">
+        <div class="quote-item-container fade">
           <div class="circle-image image-02"></div>
           <div class="quote-item-right">
             <div class="quote-line">
@@ -97,7 +97,7 @@ diaspora communities like international students.</p>
             </div>
           </div>
         </div>
-        <div class="quote-item-container">
+        <div class="quote-item-container fade">
           <div class="quote-item-left">
             <div class="quote-line">
               <span class="quote-marker">
@@ -113,7 +113,7 @@ diaspora communities like international students.</p>
           </div>
           <div class="circle-image image-03"></div>
         </div>
-        <div class="quote-item-container">
+        <div class="quote-item-container fade">
           <div class="circle-image image-04"></div>
           <div class="quote-item-right">
             <div class="quote-line">
@@ -129,7 +129,7 @@ diaspora communities like international students.</p>
             </div>
             </div>
           </div>
-          <div class="quote-item-container">
+          <div class="quote-item-container fade">
           <div class="quote-item-left">
             <div class="quote-line">
               <span class="quote-marker">
