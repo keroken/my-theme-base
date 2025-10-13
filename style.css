@@ -1903,7 +1903,6 @@ dialog {
   background-color: #eee;
   min-width: fit-content;
   padding: 2px 8px;
-  margin: 0 20px;
 }
 
 .close-button:hover,
@@ -1980,7 +1979,7 @@ dialog {
   }
   dialog {
     width: unset;
-    padding: 20px 0;
+    padding: 20px;
     max-width: 95%;
   }
 }

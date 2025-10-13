@@ -40,19 +40,19 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
             <div class="student-story-item student-story-image-01">
               <button class="story-circle-button" id="story-button-01">
                 <div class="student-story-overlay"></div>
-                <div class="story-label">Charlie</div>
+                <div class="story-label">Charlie's Story</div>
               </button>
             </div>
             <div class="student-story-item student-story-image-02">
               <button class="story-circle-button" id="story-button-02">
                 <div class="student-story-overlay"></div>
-                <div class="story-label">Alex</div>
+                <div class="story-label">Alex's Story</div>
               </button>
             </div>
             <div class="student-story-item student-story-image-03">
               <button class="story-circle-button" id="story-button-03">
                 <div class="student-story-overlay"></div>
-                <div class="story-label">Naya</div>
+                <div class="story-label">Naya's Story</div>
               </button>
             </div>
           </div>
