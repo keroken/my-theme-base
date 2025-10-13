@@ -23,7 +23,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
     </div>
   </div>
 
-  <div class="content-area">
+  <div class="content-area content-area-front-page">
     <section class="section section-stats fade">
       <div class="section-title">
         <h3>Empowering international students to impact the world
