@@ -1848,6 +1848,7 @@ dialog {
   align-items: flex-start;
   justify-content: space-between;
   column-gap: 20px;
+  font-weight: bold;
 }
 
 #story-title {
@@ -1902,6 +1903,7 @@ dialog {
   background-color: #eee;
   min-width: fit-content;
   padding: 2px 8px;
+  margin: 0 20px;
 }
 
 .close-button:hover,
@@ -1978,6 +1980,7 @@ dialog {
   }
   dialog {
     width: unset;
+    padding: 20px 0;
     max-width: 95%;
   }
 }
