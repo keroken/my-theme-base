@@ -21,8 +21,10 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
   <div class="content-area">
     <div class="content-wrapper">
       <div class="message-text page-content">
+        <div class="life-in-canada-children-container">
         <div class="life-in-canada-children-content">
-          <?php the_content(); ?>
+            <?php the_content(); ?>
+          </div>
         </div>
       </div>
     </div>
