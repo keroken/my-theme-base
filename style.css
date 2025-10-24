@@ -1863,6 +1863,15 @@ dialog {
 
 .story-body {
   margin-bottom: 20px;
+  & p {
+    text-align: left;
+  }
+  & p:has(img.aligncenter) {
+    text-align: center;
+  }
+  & p:has(img.alignright) {
+    text-align: right;
+  }
 }
 
 .story-image-container {
