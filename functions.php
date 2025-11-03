@@ -436,17 +436,21 @@ function header_custom_javascript() {
           window.addEventListener('load', () => {
               const hamburgerButton = document.getElementById('hamburger-button');
               const closeMenuButton = document.getElementById('close-menu-button');
-              const primaryMenu = document.getElementById('primary-menu');
+              const mobileMenuContainer = document.getElementById('mobile-menu-container');
               const navWrapper = document.querySelector('.primary-menu-wrapper');
               hamburgerButton.addEventListener('click', () => {
-                  primaryMenu.classList.toggle('show-menu');
+                  if (mobileMenuContainer) {
+                      mobileMenuContainer.classList.toggle('show-menu');
+                  }
                   navWrapper.classList.toggle('justify-content-start');
                   hamburgerButton.classList.toggle('show-menu');
                   closeMenuButton.classList.toggle('show-menu');
               });
 
               closeMenuButton.addEventListener('click', () => {
-                  primaryMenu.classList.toggle('show-menu');
+                  if (mobileMenuContainer) {
+                      mobileMenuContainer.classList.toggle('show-menu');
+                  }
                   navWrapper.classList.toggle('justify-content-start');
                   hamburgerButton.classList.toggle('show-menu');
                   closeMenuButton.classList.toggle('show-menu');
@@ -455,13 +459,17 @@ function header_custom_javascript() {
 
           window.addEventListener('scroll', function() {
               const siteHeader = document.getElementById('site-header');
-              const primaryMenu = document.getElementById('primary-menu');
+              const mobileMenuContainer = document.getElementById('mobile-menu-container');
               if (window.pageYOffset > 0) {
                   siteHeader.classList.add('scrolled');
-                  primaryMenu.classList.add('scrolled');
+                  if (mobileMenuContainer) {
+                      mobileMenuContainer.classList.add('scrolled');
+                  }
               } else {
                   siteHeader.classList.remove('scrolled');
-                  primaryMenu.classList.remove('scrolled');
+                  if (mobileMenuContainer) {
+                      mobileMenuContainer.classList.remove('scrolled');
+                  }
               }
           });
       </script>
