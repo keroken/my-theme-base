@@ -1493,7 +1493,7 @@ hr {
 }
 
 .section-stories {
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 }
 
 .quote-container {
@@ -2074,7 +2074,7 @@ dialog {
   }
   100% {
     opacity: 1;
-    transform: translateY(100px);
+    transform: translateY(50px);
   }
 }
 
