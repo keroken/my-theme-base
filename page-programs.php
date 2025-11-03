@@ -26,8 +26,8 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
       <section <?php post_class(); ?>>
         <div class="content-wrapper">
           <div class="message-text page-content">
-            <h2>NEEDS ARE INFINITE POSSIBILITIES ARE ENDLESS</h2>
-            <p>Our simple and strategic approach will potentially bring thousands of students returning home having been influenced by Christian love, service, and friendship. If they don’t become followers of Christ, they will have the seed of the gospel planted in their hearts. We trust the Holy Spirit will continue working toward their salvation and life transformation.</p>
+            <h2>MEETING THE NEEDS OF INTERNATIONAL STUDENTS</h2>
+            <p>Events and activities vary from city to city and campus to campus, but what doesn't change is that ISMC programs strive to meet the practical, social and spiritual needs of international students in Canada. Here are some of the ISMC programs you might find on your local campus.</p>
             <ul class="programs-list">
               <?php
               $programs = json_decode(
