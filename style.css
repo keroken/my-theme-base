@@ -1433,7 +1433,7 @@ hr {
 }
 
 .section-stats {
-  height: 400px;
+  margin-bottom: 60px;
 }
 
 .section-title {
@@ -1461,9 +1461,6 @@ hr {
 }
 
 @media screen and (max-width: 800px) {
-  .section-stats {
-    height: 1000px;
-  }
   .stats-row {
     flex-direction: column;
     gap: 60px;
@@ -1988,10 +1985,6 @@ dialog {
   .section-title {
     margin-top: unset;
     width: 100%;
-  }
-  .section-stats {
-    height: unset;
-    margin-bottom: 100px;
   }
 
   .section-stories {
