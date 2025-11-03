@@ -874,6 +874,8 @@ function find_your_city_map_functionality() {
 
       // Create a layer group for all markers
       const markers = L.layerGroup().addTo(map);
+      // Store city markers for easy access
+      const cityMarkers = new Map();
 
       // Add markers for each city and collect their bounds
       const bounds = L.latLngBounds([]);
@@ -881,6 +883,7 @@ function find_your_city_map_functionality() {
           const marker = L.marker([city.lat, city.lng])
               .bindPopup(city.name);
           markers.addLayer(marker);
+          cityMarkers.set(city.name, marker);
           
           // Add marker position to bounds
           bounds.extend([city.lat, city.lng]);
@@ -928,6 +931,30 @@ function find_your_city_map_functionality() {
                   ${socialLinks ? `<div class="social-links">${socialLinks}</div>` : ''}
               </div>
           `;
+      }
+
+      // Generate cities list
+      const citiesListContainer = document.getElementById('cities-list');
+      if (citiesListContainer) {
+          cities.forEach(city => {
+              const listItem = document.createElement('li');
+              const link = document.createElement('a');
+              link.href = '#';
+              link.textContent = city.name;
+              link.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  showCityInfo(city);
+                  // Center map on city
+                  map.setView([city.lat, city.lng], 11);
+                  // Open popup on marker
+                  const marker = cityMarkers.get(city.name);
+                  if (marker) {
+                      marker.openPopup();
+                  }
+              });
+              listItem.appendChild(link);
+              citiesListContainer.appendChild(listItem);
+          });
       }
   });
   </script>

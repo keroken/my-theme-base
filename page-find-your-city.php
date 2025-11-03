@@ -20,7 +20,7 @@ get_header(); ?>
 
     <div class="content-wrapper">
       <div class="message-text page-content">
-        <h2>Connect with our Staff in your city</h2>
+        <h2>Connect with ISMC in Your City</h2>
         <p>Click on a city marker to view more information.</p>
         <div class="find-your-city-container">
           <div class="map-container">
@@ -30,6 +30,10 @@ get_header(); ?>
             <h3>Select a City</h3>
             <p>Click on a city marker to view more information.</p>
           </div>
+        </div>
+        <div class="cities-list-container" id="cities-list-container">
+          <h3>All Cities</h3>
+          <ul class="cities-list" id="cities-list"></ul>
         </div>
       </div>
     </div>

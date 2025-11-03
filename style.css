@@ -2264,6 +2264,51 @@ dialog {
   opacity: 1;
 }
 
+.cities-list-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.cities-list-container h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #fcba03;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.cities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cities-list li {
+  margin: 0;
+}
+
+.cities-list a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #ddd;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cities-list a:hover {
+  background: rgba(252, 186, 3, 0.2);
+  color: #fcba03;
+  transform: translateY(-2px);
+}
+
 @media screen and (max-width: 800px) {
   .find-your-city-container {
     flex-direction: column;
@@ -2277,6 +2322,21 @@ dialog {
 
   .city-info {
     margin-top: 0.5rem;
+  }
+
+  .cities-list-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+
+  .cities-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .cities-list a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
