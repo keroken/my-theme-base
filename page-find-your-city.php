@@ -21,7 +21,7 @@ get_header(); ?>
     <div class="content-wrapper">
       <div class="message-text page-content">
         <h2>Connect with ISMC in Your City</h2>
-        <p>Click on a city marker to view more information.</p>
+        <p>Click on a city marker on the map or the city name in the list below to view more information.</p>
         <div class="find-your-city-container">
           <div class="map-container">
             <div id="canada-map" style="height: 600px; width: 100%;"></div>
