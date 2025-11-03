@@ -11,7 +11,7 @@ $is_supporter_page = isset($ismc_page_type) && $ismc_page_type === "supporter";
       <span class="toggle-option toggle-option-active">Volunteer</span>
     <?php else: ?>
       <span class="toggle-option toggle-option-active">Student</span>
-      <a href="<?php echo esc_url(home_url("/find-out")); ?>" class="toggle-option">Volunteer</a>
+      <a href="<?php echo esc_url(home_url("/about-volunteer")); ?>" class="toggle-option">Volunteer</a>
     <?php endif; ?>
   </div>
 </div>
