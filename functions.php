@@ -425,7 +425,7 @@ function find_out_page_custom_javascript() {
   <?php
 }
 add_action('wp_head', function () {
-  if (is_page('find-out')) {
+  if (is_page('about-volunteer')) {
     find_out_page_custom_javascript();
   }
 });
