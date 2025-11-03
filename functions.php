@@ -16,6 +16,15 @@ function mytheme_setup() {
 }
 add_action('after_setup_theme', 'mytheme_setup');
 
+// Add Favicon
+function mytheme_favicon() {
+  $favicon_url = get_template_directory_uri() . '/images/ISMC_circle_logo_sq.svg';
+  echo '<link rel="icon" type="image/svg+xml" href="' . esc_url($favicon_url) . '">' . "\n";
+  // Fallback for older browsers that don't support SVG favicons
+  echo '<link rel="alternate icon" href="' . esc_url($favicon_url) . '">' . "\n";
+}
+add_action('wp_head', 'mytheme_favicon', 1);
+
 // SEO Meta Tags Function
 function mytheme_seo_meta_tags() {
   global $post;
