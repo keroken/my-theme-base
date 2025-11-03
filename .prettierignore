@@ -19,6 +19,9 @@ wp-content/uploads/
 *.min.js
 *.min.css
 
+# PHP files (Prettier doesn't handle mixed HTML/PHP tab indentation well)
+*.php
+
 # Other files
 .DS_Store
 *.log
