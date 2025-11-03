@@ -82,14 +82,14 @@
 					<div class="footer-credits">
 						<p class="footer-copyright">&copy;
 							<?php
-       /* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
-       $date_format = _x('Y', 'copyright date format');
-       if (function_exists('wp_date')) {
-         echo wp_date($date_format);
-       } else {
-         echo date_i18n($date_format);
-       }
-       ?>
+                /* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
+                $date_format = _x('Y', 'copyright date format');
+                if (function_exists('wp_date')) {
+                  echo wp_date($date_format);
+                } else {
+                  echo date_i18n($date_format);
+                }
+              ?>
 							<?php bloginfo('name'); ?>
 						</p><!-- .footer-copyright -->
 						<?php if (function_exists('the_privacy_policy_link')) {
@@ -97,7 +97,19 @@
       } ?>
 					</div><!-- .footer-credits -->
 
-          <?php get_template_part('content', 'cta-button'); ?>
+          <?php
+          // Check page type to determine which button to show
+          global $ismc_page_type;
+          $is_supporter_page = isset($ismc_page_type) && $ismc_page_type === "supporter";
+          
+          if ($is_supporter_page):
+            // Show CTA button (DONATE) on volunteer/supporter pages
+            get_template_part('content', 'cta-button');
+          else:
+            // Show Find Your City button on student pages
+            get_template_part('content', 'find-your-city-button');
+          endif;
+          ?>
 
 			</footer><!-- #site-footer -->
 		<?php wp_footer(); ?>
