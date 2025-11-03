@@ -193,6 +193,11 @@ function front_page_custom_javascript() {
 
           // Add fade in effect when elements enter viewport
           const fadeElements = document.querySelectorAll(".fade");
+          
+          // Get section-stories and its children to exclude from general observer
+          const sectionStories = document.querySelector(".section-stories");
+          const sectionStoriesElements = sectionStories ? 
+              [sectionStories, ...sectionStories.querySelectorAll(".fade")] : [];
 
           const observerOptions = {
               root: null,
@@ -209,9 +214,35 @@ function front_page_custom_javascript() {
               });
           }, observerOptions);
 
+          // Observe all fade elements except section-stories and its children
           fadeElements.forEach(element => {
-              fadeObserver.observe(element);
+              if (!sectionStoriesElements.includes(element)) {
+                  fadeObserver.observe(element);
+              }
           });
+
+          // Specific observer for section-stories to trigger animation earlier
+          if (sectionStories) {
+              const storiesObserverOptions = {
+                  root: null,
+                  rootMargin: '200px 0px', // Trigger when element is 200px away from viewport
+                  threshold: 0 // Trigger as soon as any part is about to enter
+              };
+
+              const storiesObserver = new IntersectionObserver((entries, observer) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          entry.target.classList.add("fadeIn");
+                          observer.unobserve(entry.target);
+                      }
+                  });
+              }, storiesObserverOptions);
+
+              // Observe section-stories and all nested fade elements with early trigger
+              sectionStoriesElements.forEach(element => {
+                  storiesObserver.observe(element);
+              });
+          }
       });
 
       class ParallaxEffectBackground {

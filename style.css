@@ -1402,10 +1402,11 @@ hr {
   background-color: #f7da79;
 }
 
-/* Hide CTA button on mobile devices */
 @media screen and (max-width: 768px) {
   .cta-button {
-    display: none;
+    bottom: 40px;
+    height: 60px;
+    border-radius: 30px;
   }
 }
 
@@ -1990,7 +1991,7 @@ dialog {
   }
   .section-stats {
     height: unset;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
 
   .section-stories {

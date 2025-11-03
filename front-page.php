@@ -43,7 +43,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
         </div>
       </div>
     </section>
-    <section class="section section-stories">
+    <section class="section section-stories fade">
       <div class="quote-container fade">
         <div class="quote-item-container fade">
           <div class="quote-item-left">
