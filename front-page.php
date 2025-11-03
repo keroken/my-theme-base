@@ -15,7 +15,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
         <div class="hero-message-container">
           <div class="hero-message">
             <h1>International Student Ministries Canada</h1>
-            <h2>Empowering international students to impact the world through Jesus Christ.</h2>
+            <h2>Empowering international students to impact the world through Jesus Christ</h2>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
   <div class="content-area content-area-front-page">
     <section class="section section-stats fade">
       <div class="section-title">
-        <h3>Helping international students find their home in Canada.</h3>
+        <h3>Helping international students find their home in Canada</h3>
       </div>
       <div class="stats-row fade">
         <div class="stats-item">
