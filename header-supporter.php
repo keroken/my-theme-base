@@ -60,11 +60,12 @@
 							</nav><!-- .primary-menu-wrapper -->
 						<?php } ?>
 				</div><!-- .header-navigation-wrapper -->
-        <div>
-          <a href="<?php echo esc_url(
-            home_url('/'),
-          ); ?>" class="left-link">Student Pages</a>
-        </div>
+        <?php
+        // Set global variable to indicate this is a supporter/volunteer page
+        global $ismc_page_type;
+        $ismc_page_type = "supporter";
+        get_template_part("content-page-toggle");
+        ?>
 			</div><!-- .header-inner -->
 		</header><!-- #site-header -->
 		<?php // Output the menu modal.
