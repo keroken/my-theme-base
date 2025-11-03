@@ -31,39 +31,20 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
       </div>
       <div class="stats-row fade">
         <div class="stats-item">
-          <div class="stats-number">40</div>
-          <div class="stats-label">Years</div>
+          <div class="stats-number">23</div>
+          <div class="stats-label">Cities across Canada</div>
         </div>
         <div class="stats-item">
-          <div class="stats-number">17</div>
-          <div class="stats-label">Cities in Canada</div>
-        </div>
-        <div class="stats-item">
-          <div class="stats-number">40</div>
+          <div class="stats-number">52</div>
           <div class="stats-label">Campuses in Canada</div>
         </div>
         <div class="stats-item">
-          <div class="stats-number">20k</div>
-          <div class="stats-label">Students Reached</div>
+          <div class="stats-number"><?php echo date('Y') - 1984; ?></div>
+          <div class="stats-label">Years</div>
         </div>
       </div>
     </section>
     <section class="section section-stories">
-      <div class="section-title fade">
-        <h3>A local community with global impact</h3>
-      </div>
-      <div class="story-preface fade">
-        <p class="message-text">What God started 40 years ago has touched so many lives. Over those
-decades, ISMC has impacted the eternity of countless students, who
-have gone on to impact their circles of influence in Canada and around
-the world.</p>
-        <p class="message-text">This is not a new strategy.</p>
-        <p class="message-text">Remember Pentecost? People from all over heard
-about Jesus in Jerusalem and took the gospel home with them.</p>
-        <p class="message-text">This back and
-forth has been part of God's strategy since the early church and continues today with 
-diaspora communities like international students.</p>
-      </div>
       <div class="quote-container fade">
         <div class="quote-item-container fade">
           <div class="quote-item-left">
