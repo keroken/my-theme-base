@@ -198,8 +198,6 @@ function front_page_custom_javascript() {
   ?>
       <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', () => {
-          const overlay = document.querySelector('.overlay');
-
           // Add fade in effect when elements enter viewport
           const fadeElements = document.querySelectorAll(".fade");
           
@@ -311,8 +309,6 @@ function find_out_page_custom_javascript() {
           const storyButton01 = document.getElementById('story-button-01');
           const storyButton02 = document.getElementById('story-button-02');
           const storyButton03 = document.getElementById('story-button-03');
-          const storyButton04 = document.getElementById('story-button-04');
-          const storyButton05 = document.getElementById('story-button-05');
 
           // Check if elements exist
           if (!storyModal) {
@@ -399,18 +395,6 @@ function find_out_page_custom_javascript() {
           if (storyButton03) {
               storyButton03.addEventListener('click', () => {
                   openModal('03');
-              });
-          }
-
-          if (storyButton04) {
-              storyButton04.addEventListener('click', () => {
-                  openModal('04');
-              });
-          }
-
-          if (storyButton05) {
-              storyButton05.addEventListener('click', () => {
-                  openModal('05');
               });
           }
 
@@ -597,289 +581,22 @@ function find_your_city_map_functionality() {
           maxZoom: 19
       }).addTo(map);
 
-      // City data
-      const cities = [
-          // British Columbia
-          {
-              name: 'Victoria',
-              lat: 48.4284,
-              lng: -123.3656,
-              staff_name: 'Sandi Mcdougall',
-              email: 'sandi.mcdougall@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'Vancouver',
-              lat: 49.2827,
-              lng: -123.1207,
-              staff_name: 'Izumi Araki',
-              email: 'izumi.araki@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'Surrey',
-              lat: 49.1913,
-              lng: -122.8490,
-              staff_name: 'Jessica Mamouler',
-              email: 'jessica.mamouler@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'Kelowna',
-              lat: 49.8877,
-              lng: -119.4960,
-              staff_name: 'Rick Wilgosh',
-              email: 'rick.wilgosh@ismc.ca',
-              website: '',
-              social: {
-                  facebook: 'https://www.facebook.com/utalkspage/',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'Kamloops',
-              lat: 50.6745,
-              lng: -120.3273,
-              staff_name: 'Jeff Torrans',
-              email: 'jeff.torrans@ismc.ca',
-              website: '',
-              social: {
-                  facebook: 'https://www.facebook.com/groups/FocusClubTRU/',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          // Alberta
-          {
-              name: 'Calgary',
-              lat: 51.0447,
-              lng: -114.0719,
-              staff_name: 'Cleuber De Sousa',
-              email: 'cleuber.desousa@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'Edmonton',
-              lat: 53.5461,
-              lng: -113.4938,
-              staff_name: 'Gary Short',
-              email: 'gary.short@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          // Saskatchewan
-          {
-              name: 'Regina',
-              lat: 50.4452,
-              lng: -104.6189,
-              staff_name: 'Leighton Gust',
-              email: 'leighton.gust@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'Saskatoon',
-              lat: 52.1332,
-              lng: -106.6700,
-              staff_name: 'Cam Janzen',
-              email: 'cam.janzen@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          // Manitoba
-          {
-              name: 'Winnipeg',
-              lat: 49.8951,
-              lng: -97.1384,
-              staff_name: 'Frieda Martens',
-              email: 'frieda.martens@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          // Ontario
-          {
-              name: 'Kitchener-Waterloo',
-              lat: 43.4516,
-              lng: -80.4925,
-              staff_name: 'Dorothy Tam',
-              email: 'dorothy.tam@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'Guelph',
-              lat: 43.5448,
-              lng: -80.2482,
-              staff_name: 'Karen Ting',
-              email: '',
-              website: 'https://www.guelphinternationalstudents.com',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: 'https://www.instagram.com/guelphinternationalstudents/'
-              }
-          },
-          {
-              name: 'Hamilton',
-              lat: 43.5890,
-              lng: -79.6441,
-              staff_name: 'Peter Scholtens',
-              email: '',
-              website: 'https://events.helpinginternationalstudents.com/hamilton',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: 'https://www.instagram.com/hamiltoninternationalstudents/'
-              }
-          },
-          {
-              name: 'Brantford',
-              lat: 43.1394,
-              lng: -80.2644,
-              staff_name: 'Jason Keuning',
-              email: 'jason.keuning@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'London',
-              lat: 42.9849,
-              lng: -81.2453,
-              staff_name: 'Stuart Smith',
-              email: '',
-              website: 'https://www.londoninternationalstudents.com',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: 'https://www.instagram.com/london_international_students/'
-              }
-          },
-          {
-              name: 'Niagara',
-              lat: 43.0896,
-              lng: -79.0849,
-              staff_name: 'Hilda Vanderklippe',
-              email: '',
-              website: 'https://www.niagarainternationalstudents.com',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: 'https://www.instagram.com/niagarainternationalstudents/'
-              }
-          },
-          {
-              name: 'Toronto',
-              lat: 43.6532,
-              lng: -79.3832,
-              staff_name: 'Pin Wong',
-              email: '',
-              website: 'https://events.helpinginternationalstudents.com/toronto',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          {
-              name: 'Ottawa',
-              lat: 45.4215,
-              lng: -75.6972,
-              staff_name: 'Vinu Rajus',
-              email: 'vinu.rajus@ismc.ca',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
-          },
-          // Quebec
-          {
-              name: 'Montreal',
-              lat: 45.5017,
-              lng: -73.5673,
-              staff_name: 'Belinda Tam',
-              email: '',
-              website: 'https://www.montrealinternationalstudents.com/',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: 'https://www.instagram.com/internationalstudentsmontreal'
-              }
-          },
-          {
-              name: 'Sherbrooke',
-              lat: 45.4000,
-              lng: -71.8990,
-              staff_name: 'Andrey Cañas',
-              email: '',
-              website: '',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: 'https://www.instagram.com/sherbrooke.int.students/'
-              }
-          },
-          // Nova Scotia
-          {
-              name: 'Halifax',
-              lat: 44.6488,
-              lng: -63.5752,
-              staff_name: 'Chi Perrie',
-              email: '',
-              website: 'https://ismchalifax.ca/',
-              social: {
-                  facebook: '',
-                  twitter: '',
-                  instagram: ''
-              }
+      // City data loaded from JSON file
+      <?php
+      $cities_json_path = get_template_directory() . '/data/cities-data.json';
+      $cities_data = [];
+      
+      if (file_exists($cities_json_path)) {
+          $cities_json = file_get_contents($cities_json_path);
+          $cities_data = json_decode($cities_json, true);
+          
+          if (json_last_error() !== JSON_ERROR_NONE) {
+              // If JSON is invalid, set empty array
+              $cities_data = [];
           }
-      ];
+      }
+      ?>
+      const cities = <?php echo json_encode($cities_data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
 
       // Create a layer group for all markers
       const markers = L.layerGroup().addTo(map);

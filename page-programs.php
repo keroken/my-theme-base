@@ -32,7 +32,7 @@ $breadcrumbs_show = get_post_meta(get_the_ID(), 'breadcrumbs_show', true);
               <?php
               $programs = json_decode(
                 file_get_contents(
-                  get_template_directory() . '/programs-data.json',
+                  get_template_directory() . '/data/programs-data.json',
                 ),
                 true,
               );

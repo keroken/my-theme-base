@@ -16,7 +16,7 @@ Version: 1.0
 }
 
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -486,7 +486,7 @@ hr {
   justify-content: center;
   width: 100%;
   height: 200px;
-  background: url("images/hero-image-short.jpg") top no-repeat;
+  background: url('images/hero-image-short.jpg') top no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -494,13 +494,13 @@ hr {
 
 /* WebP support for page hero */
 .webp .page-hero-container {
-  background-image: url("images/hero-image-short.webp");
+  background-image: url('images/hero-image-short.webp');
 }
 
 .page-hero-message h1 {
   position: relative;
   font-size: 48px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   color: #fcba03;
   font-weight: 600;
   line-height: 1.3;
@@ -522,7 +522,7 @@ hr {
 .page-content h2 {
   text-align: center;
   color: #fff;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.2;
@@ -532,7 +532,7 @@ hr {
 .page-content h3 {
   text-align: center;
   color: #fff;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.2;
@@ -542,7 +542,7 @@ hr {
 .page-content h4 {
   text-align: center;
   color: #fff;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
@@ -677,14 +677,14 @@ hr {
 .post-title {
   text-align: center;
   color: #fff;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
 }
 
 .post-text {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
@@ -776,7 +776,7 @@ hr {
 }
 
 .single-text {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
@@ -792,40 +792,6 @@ hr {
 }
 
 /* ================================================================ 
-  Single Staff Page
-=================================================================== */
-.single-staff-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.single-staff-thumbnail {
-  & img {
-    width: 160px;
-    height: auto;
-    border-radius: 50%;
-  }
-}
-
-.single-staff-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin-left: 20px;
-}
-
-.single-staff-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  color: #666;
-}
-
-/* ================================================================ 
   Supporter Page
 =================================================================== */
 
@@ -836,7 +802,7 @@ hr {
 }
 
 .message-text-supporter {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
@@ -850,7 +816,7 @@ hr {
 
 .stats-label-supporter {
   font-size: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 1.2;
   color: #333;
@@ -858,7 +824,7 @@ hr {
 
 .stats-number-supporter {
   font-size: 64px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: #fcba03;
 }
@@ -870,7 +836,7 @@ hr {
 .page-content-supporter h2 {
   text-align: center;
   color: #333;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.2;
@@ -880,7 +846,7 @@ hr {
 .page-content-supporter h3 {
   text-align: center;
   color: #333;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.2;
@@ -889,7 +855,7 @@ hr {
 
 @media screen and (max-width: 800px) {
   .page-content-supporter {
-    width: 100%;
+    width: 90%;
     & p {
       padding: 0 20px;
     }
@@ -899,7 +865,7 @@ hr {
 .page-content-supporter h4 {
   text-align: center;
   color: #333;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
@@ -938,15 +904,15 @@ hr {
 }
 
 .student-story-image-01 {
-  background-image: url("./images/Charlie.jpg");
+  background-image: url('./images/Charlie.jpg');
 }
 
 .student-story-image-02 {
-  background-image: url("./images/Alex.jpg");
+  background-image: url('./images/Alex.jpg');
 }
 
 .student-story-image-03 {
-  background-image: url("./images/Naya.jpg");
+  background-image: url('./images/Naya.jpg');
 }
 
 @media screen and (max-width: 1200px) {
@@ -976,7 +942,7 @@ hr {
   color: #fff;
   & h4 {
     color: #fff;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 28px;
     font-weight: 500;
     line-height: 1.2;
@@ -1240,115 +1206,6 @@ hr {
 }
 
 /* ================================================================ 
-  Volunteer Page
-=================================================================== */
-
-.volunteer-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  & li {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-    margin-bottom: 20px;
-    width: 45%;
-  }
-  & img {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .volunteer-list {
-    flex-direction: column;
-    align-items: center;
-    & li {
-      width: 100%;
-    }
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .volunteer-list {
-    & li {
-      flex-direction: column-reverse;
-    }
-  }
-}
-
-.volunteer-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-/* ================================================================ 
-  All Staff Page
-=================================================================== */
-.page-content-staff {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80%;
-  padding: 60px 0;
-  gap: 60px;
-}
-
-@media screen and (max-width: 1200px) {
-  .page-content-staff {
-    grid-template-columns: 1fr;
-  }
-}
-
-.staff-item {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 40px;
-}
-
-.staff-image img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.staff-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 20px;
-  padding-top: 40px;
-}
-
-.staff-location {
-  margin-top: 20px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 20px;
-  margin-top: 40px;
-}
-
-.single-text-supporter {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  text-align: left;
-  color: #666;
-}
-
-/* ================================================================ 
   Front Page
 =================================================================== */
 .front-bg {
@@ -1382,7 +1239,7 @@ hr {
 }
 
 .hero-area {
-  background: url("images/hero-image.jpg") top no-repeat;
+  background: url('images/hero-image.jpg') top no-repeat;
   background-size: cover;
   width: 100vw;
   height: 720px;
@@ -1392,7 +1249,7 @@ hr {
 }
 
 .webp .hero-area {
-  background-image: url("images/hero-image.webp");
+  background-image: url('images/hero-image.webp');
 }
 
 .hero-overlay {
@@ -1418,7 +1275,7 @@ hr {
 
 .hero-message h1 {
   font-size: 48px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   color: #fcba03;
   font-weight: 600;
   line-height: 1.3;
@@ -1427,7 +1284,7 @@ hr {
 
 .hero-message h2 {
   font-size: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #fff;
   font-weight: 300;
   line-height: 1.3;
@@ -1447,7 +1304,7 @@ hr {
   background-color: #fcba03;
   font-size: 18px;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #222;
   z-index: 1;
   transition: background-color 0.3s ease-in-out;
@@ -1501,7 +1358,7 @@ hr {
 .section-title h3 {
   text-align: center;
   color: #fff;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.2;
@@ -1532,14 +1389,14 @@ hr {
 
 .stats-number {
   font-size: 64px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: #ffd45c;
 }
 
 .stats-label {
   font-size: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 1.2;
   color: #ddd;
@@ -1597,7 +1454,7 @@ hr {
 
 .quote-text {
   font-size: 22px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   line-height: 1.6;
   color: #ffe45c;
@@ -1606,7 +1463,7 @@ hr {
 
 .quote-author {
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   line-height: 1.6;
   color: #ddd;
@@ -1664,33 +1521,13 @@ hr {
   background-image: url(./images/sunset.jpg);
 }
 
-.story-container {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 100%;
-}
-
-.story-preface {
-  margin-top: 40px;
-  width: 80%;
-  max-width: 1000px;
-}
-
 .message-text {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   text-align: center;
   color: #ddd;
-}
-
-.story-canvas {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-top: 50px;
 }
 
 .circle {
@@ -1745,7 +1582,7 @@ hr {
 .story-label {
   position: absolute;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 600;
 }
@@ -1756,160 +1593,6 @@ hr {
   height: 100%;
   background: rgb(0 0 0 / 0.6);
   border-radius: 50%;
-}
-
-.circle-01 {
-  top: calc(0% - 100px);
-  left: -320px;
-  width: 480px;
-  height: 480px;
-  background-image: url(./images/finger_print_circle_01.svg);
-  background-size: cover;
-}
-
-.circle-02 {
-  top: 40%;
-  left: 20%;
-  width: 240px;
-  height: 240px;
-  background-color: #1c57a1;
-  background-image: url("./images/Hatsumi_01.jpg");
-  background-size: cover;
-}
-
-.circle-03 {
-  top: calc(10% - 100px);
-  left: 90%;
-  width: 240px;
-  height: 240px;
-  background-image: url(./images/finger_print_circle_01.svg);
-  background-size: cover;
-}
-
-.circle-04 {
-  top: calc(115% - 100px);
-  left: 35%;
-  width: 120px;
-  height: 120px;
-  background-image: url(./images/finger_print_circle_01.svg);
-  background-size: cover;
-}
-
-.circle-05 {
-  top: 45%;
-  left: 65%;
-  width: 240px;
-  height: 240px;
-  background-color: #1c57a1;
-  background-image: url("./images/Vinu_01.jpg");
-  background-size: cover;
-}
-
-.circle-06 {
-  top: 0%;
-  left: 50%;
-  width: 360px;
-  height: 360px;
-  background-color: #1c57a1;
-  background-image: url("./images/Yan_01.jpg");
-  background-size: cover;
-}
-
-.circle-07 {
-  top: 88%;
-  left: 50%;
-  width: 240px;
-  height: 240px;
-  background-color: #1c57a1;
-  background-image: url("./images/Mindy_01.jpg");
-  background-size: cover;
-}
-
-.circle-08 {
-  top: 75%;
-  left: 8%;
-  width: 360px;
-  height: 360px;
-  background-color: #1c57a1;
-  background-image: url("./images/Kenji_01.jpg");
-  background-size: cover;
-}
-
-.circle-09 {
-  top: calc(20% - 100px);
-  left: 32%;
-  width: 120px;
-  height: 120px;
-  background-image: url(./images/finger_print_circle_01.svg);
-  background-size: cover;
-}
-
-.circle-10 {
-  top: calc(65% - 100px);
-  left: 43%;
-  width: 180px;
-  height: 180px;
-  background-image: url(./images/ISMC_circle_logo_sq.svg);
-  background-size: cover;
-}
-
-.circle-11 {
-  top: 95%;
-  left: 80%;
-  width: 240px;
-  height: 240px;
-  background-image: url(./images/finger_print_circle_01.svg);
-  background-size: cover;
-}
-
-.section-cta {
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cta-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
-}
-
-.cta-message {
-  width: 80%;
-  max-width: 720px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 30px;
-}
-
-.cta-message-text {
-  text-align: center;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.cta-message-text h4 {
-  text-align: center;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 1.6;
-  max-width: 720px;
-  text-align: center;
-}
-
-.cta-container strong {
-  font-weight: 500;
-  color: #ffd45c;
 }
 
 dialog {
@@ -2019,9 +1702,6 @@ dialog {
     width: 240px;
     height: 240px;
   }
-  .navbar-brand {
-    width: 200px;
-  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2049,51 +1729,15 @@ dialog {
   .message-text {
     font-size: 16px;
   }
-  .story-canvas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-  }
-  div.fingerprint {
-    display: none;
-  }
-  div.logo-circle {
-    display: none;
-  }
   div.story-circle {
     position: relative;
     top: unset;
     left: unset;
   }
-  .section-cta {
-    margin-bottom: 60px;
-  }
   dialog {
     width: unset;
     padding: 20px;
     max-width: 95%;
-  }
-}
-
-/* ================================================================ 
-  40years Page
-=================================================================== */
-
-.forty-years-section {
-  width: 100%;
-}
-
-.forty-years-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 800px;
-}
-
-@media screen and (max-width: 800px) {
-  .forty-years-column {
-    width: 100%;
   }
 }
 
@@ -2104,9 +1748,7 @@ dialog {
 .fade {
   opacity: 0;
   transform: translateY(0);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .fadeIn {
@@ -2124,24 +1766,6 @@ dialog {
   100% {
     opacity: 1;
     transform: translateY(50px);
-  }
-}
-
-.fadeIn2 {
-  animation-name: fadeIn2;
-  animation-duration: 4s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn2 {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -2190,7 +1814,7 @@ dialog {
 .city-info h2 {
   margin-top: 0;
   color: #fcba03;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.2;
@@ -2199,7 +1823,7 @@ dialog {
 .city-info h3 {
   margin-top: 0;
   color: #fcba03;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
@@ -2221,7 +1845,7 @@ dialog {
 .city-details h3 {
   margin-top: 0;
   color: #fcba03;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
@@ -2275,7 +1899,7 @@ dialog {
   margin-top: 0;
   margin-bottom: 1rem;
   color: #fcba03;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 28px;
   font-weight: 500;
 }
